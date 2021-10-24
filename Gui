@@ -671,4 +671,110 @@ if game.PlaceId == 2512643572 then
 	local Tab = Window:NewTab("Credits")
 	local Section = Tab:NewSection("! Qoucx#9415 - Owner and Scripter")
 	local Section = Tab:NewSection("YouBuggin#0001 - Helped me debug")
+	Section:NewButton("Qoucx", "", function()
+		print("No")	
+end)
+
+elseif game.PlaceId == 137877687 then 
+	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+	local Window = Library.CreateLib("Qoucx Hub RoCitizens", "DarkTheme")
+	local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local CrntPlr = game.Players.LocalPlayer
+	local Burger = CFrame.new (-5342.27295, 6.16413927, 4462.93604, -0.0436534584, -2.0773447e-08, -0.999046743, 3.88718391e-08, 1, -2.24917773e-08, 0.999046743, -3.981663e-08, -0.0436534584)
+	local Bank = CFrame.new (-5174.7666, 6.5807991, 5266.92285, 0.999605954, 2.64660187e-08, -0.028070692, -2.64918256e-08, 1, -5.4742022e-10, 0.028070692, 1.29084832e-09, 0.999605954)
+	local GasStation = CFrame.new (-5152.52344, 6.08075905, 4692.4458, 0.961206138, -6.24350918e-08, 0.275831044, 7.45247064e-08, 1, -3.33483747e-08, -0.275831044, 5.26108899e-08, 0.961206138)
+	local Gym = CFrame.new (-4958.17822, 6.58077383, 5816.32373, 1, 1.76448332e-08, -4.90184502e-05, -1.76445667e-08, 1, 5.44188605e-09, 4.90184502e-05, -5.44102097e-09, 1)
+	local Spawn = CFrame.new (-4957.22266, 6.58078337, 4961.08057, -0.0315744318, -8.83287488e-09, 0.999501407, 4.26341664e-08, 1, 1.01841025e-08, -0.999501407, 4.29344666e-08, -0.0315744318)
+	local PoliceStation = CFrame.new (-5502.4248, 6.08075428, 4958.68652, -0.305918068, -2.83324724e-08, -0.952057838, -9.97553897e-08, 1, 2.29450792e-09, 0.952057838, 9.56748352e-08, -0.305918068)
+	local Disco = CFrame.new (-4876.44092, 6.58482218, 5598.17529, 0.0400315858, -3.03584322e-08, 0.999198437, 2.71889373e-08, 1, 2.92934992e-08, -0.999198437, 2.59944777e-08, 0.0400315858)
+	local CarShop = CFrame.new (-5170.99512, 6.17728376, 4948.41113, -0.134448245, -4.50411726e-08, -0.990920603, -2.03790886e-08, 1, -4.26888285e-08, 0.990920603, 1.44546215e-08, -0.134448245)
+	
+	
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "RoCitizens"; 
+		Text = "Made By ! Qoucx#9415";
+		Duration = "5";
+	}) 
+	
+	
+	
+	
+	getgenv().RCCandyFarm = true;
+	getgenv().AutoBuy = true;
+	
+	local Tab = Window:NewTab("Latest Update")
+	local Section = Tab:NewSection("Made by ! Qoucx#9415")
+	local Section = Tab:NewSection("Release!")
+	
+	local Tab = Window:NewTab("Teleports")
+	local Section = Tab:NewSection("Teleports")
+	Section:NewButton("Burger Place", "", function()
+		player.CFrame = Burger
+	end)
+	
+	Section:NewButton("Police Station", "", function()
+		player.CFrame = PoliceStation
+	end)
+	
+	Section:NewButton("Gym", "", function()
+		player.CFrame = Gym
+	end)
+	
+	Section:NewButton("Spawn", "", function()
+		player.CFrame = Spawn
+	end)
+	
+	Section:NewButton("Disco", "", function()
+		player.CFrame = Disco
+	end)
+	
+	Section:NewButton("CarShop", "", function()
+		player.CFrame = CarShop
+	end)
+	
+	Section:NewButton("GasStation", "", function()
+		player.CFrame = GasStation
+	end)
+	
+	Section:NewButton("Bank", "", function()
+		player.CFrame = Bank
+	end)
+	
+	local Tab = Window:NewTab("Halloween")
+	local Section = Tab:NewSection("Auto Farm (Halloween)")
+	
+	Section:NewButton("Auto Farm Candy", "", function()
+		while CandyFarm == true do 
+		   wait()
+		   print("Not Ready")
+		end
+	end)
+	
+	local Section = Tab:NewSection("Auto Buy (Halloween)")
+	local Tab = Window:NewTab("Auto Buy")
+	local Section = Tab:NewSection("Auto Buy (Halloween)")
+	
+	Section:NewButton("Auto Buy Pumpkins", "", function()
+		while AutoBuy == true do 
+			wait()
+				local args = {
+					[1] = "Food",
+					[2] = {
+						["Name"] = "Pumpkin",
+						["Shop"] = "Super Mart"
+					}
+				}
+	
+			game:GetService("ReplicatedStorage").Relays.Transaction.BuyItem:InvokeServer(unpack(args))
+		end
+		
+	end)
+	
+	Section:NewButton("Stop Auto Buying Candy", "", function()
+		wait()
+		getgenv().AutoBuy = false;
+	end)
+
+elseif game.PlaceId == 1512515 then
+	print("Not Ready")
 end
