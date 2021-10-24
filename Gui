@@ -3,6 +3,16 @@ local Window = Library.CreateLib("Qoucx Hub BGS", "DarkTheme")
 local player = game.Players.LocalPlayer.Character.HumanoidRootPart
 local CrntPlr = game.Players.LocalPlayer
 
+-- Kicks when update
+local startingid = syn.request({Method="GET",Url="https://raw.githubusercontent.com/SloExploits/BGS-AutoFarm/main/BGS%20GUI"}).Body
+spawn(function()
+	while wait(4) do
+		if startingid ~= syn.request({Method="GET",Url="https://raw.githubusercontent.com/SloExploits/BGS-AutoFarm/main/BGS%20GUI"}).Body then
+			game.Players.LocalPlayer:Kick("Script has been updated, Rejoin and Execute")
+		end
+	end
+end)
+
 -- Detects when someone executes 
 
 local webhookcheck =
@@ -66,7 +76,7 @@ end
 
 local Tab = Window:NewTab("Latest Update")
 local Section = Tab:NewSection("Made by ! Qoucx#9415")
-local Section = Tab:NewSection("Fixed AutoFarm")
+local Section = Tab:NewSection("Fixed Autofarm")
 
 local Tab = Window:NewTab("Autofarms")
 local Section = Tab:NewSection("AutoBlow")
