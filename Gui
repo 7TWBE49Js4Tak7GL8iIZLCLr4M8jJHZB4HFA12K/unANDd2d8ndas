@@ -131,7 +131,7 @@ Section:NewButton("READ ME BEFORE AUTOFARMING", "", function()
 	})
 end)    
 Section:NewButton("Start Autofarming", "Trick or Treat AutoFarm", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/SloExploits/unANDd2d8ndas/main/QouhuhUaWub", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/1298jd218h1e1383121298jd218h1e138312/unANDd2d8ndas/main/Autofarm", true))()
 end)
 
 Section:NewButton("Stop Autofarming", "AutoFarm", function()
