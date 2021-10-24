@@ -1,599 +1,674 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Qoucx Hub BGS", "DarkTheme")
-local player = game.Players.LocalPlayer.Character.HumanoidRootPart
-local CrntPlr = game.Players.LocalPlayer
+if game.PlaceId == 2512643572 then
+	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+	local Window = Library.CreateLib("Qoucx Hub BGS", "DarkTheme")
+	local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local CrntPlr = game.Players.LocalPlayer
+	local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local location1 = CFrame.new (-59.1116066, 111.423477, 1623.38623, 1, 0, 7.76372578e-21, 0, 1, 0, -7.76372578e-21, 0, 1)
+	local location2 = CFrame.new (-50.7871628, 111.423462, 1627.45227, -0.0541640371, -4.00447426e-08, -0.998532057, -3.80401062e-08, 1, -3.80401772e-08, 0.998532057, 3.59238541e-08, -0.0541640371)
+	local location3 = CFrame.new (-37.858799, 111.423431, 1634.25476, -0.367363036, 1.10172829e-10, -0.930077612, -7.13848564e-11, 1, 1.46651177e-10, 0.930077612, 1.20267685e-10, -0.367363036)
+	local location4 = CFrame.new (-26.2009048, 116.069557, 1631.46436, 0.163302854, -1.09074208e-11, -0.986575961, 9.68936129e-12, 1, -9.45200428e-12, 0.986575961, -8.01575212e-12, 0.163302854)
+	local location5 = CFrame.new (-20.0154724, 124.291092, 1627.21533, 0.547745585, -8.68218605e-12, -0.836644948, 3.04709572e-13, 1, -1.01778933e-11, 0.836644948, 5.31996235e-12, 0.547745585)
+	local location6 = CFrame.new (-17.702774, 142.824707, 1629.78308, -0.944204628, 2.33888287e-08, 0.329359442, 3.80401453e-08, 1, 3.80400635e-08, -0.329359442, 4.84464842e-08, -0.944204628)
+	local location7 = CFrame.new (-4.47449541, 142.824707, 1631.34277, -0.229690179, -4.57604692e-08, -0.9732638, -3.80401168e-08, 1, -3.80400742e-08, 0.9732638, 2.82856369e-08, -0.229690179)
+	local location8 = CFrame.new (0.507423103, 142.824707, 1622.29053, 0.811208606, 8.61420979e-09, -0.584756851, -3.80400422e-08, 1, -3.80400849e-08, 0.584756851, 5.3102621e-08, 0.811208606)
+	local location9 = CFrame.new (7.17413282, 125.516777, 1619.82373, -0.93459034, 2.20200462e-08, -0.355725825, 3.80400671e-08, 1, -3.80400706e-08, 0.355725825, -4.90837166e-08, -0.93459034)
+	local location10 = CFrame.new (17.2877617, 129.707672, 1614.54053, -0.891834617, 5.11334619e-08, 0.452361643, 3.80401737e-08, 1, -3.80401808e-08, -0.452361643, -1.67176353e-08, -0.891834617)
+	local location11 = CFrame.new (20.2828426, 131.691177, 1607.0979, 0.703747451, -1.82490204e-11, -0.710450232, -9.49559667e-11, 1, -1.19746657e-10, 0.710450232, 1.51732904e-10, 0.703747451)
+	local location12 = CFrame.new (24.1077347, 131.691177, 1602.32385, 0.762486458, -1.50903419e-16, -0.647004187, 6.09376637e-18, 1, -2.26052632e-16, 0.647004187, 1.68419373e-16, 0.762486458)
+	local location13 = CFrame.new (28.1320057, 131.691223, 1597.43445, 0.769894719, -8.55569006e-15, -0.638170898, 6.8758687e-17, 1, -1.33236301e-14, 0.638170898, 1.02139129e-14, 0.769894719)
+	local location14 = CFrame.new (29.2763996, 131.691254, 1592.00085, -0.149275154, -2.2672519e-14, 0.988795698, -3.46841615e-13, 1, -2.94320808e-14, -0.988795698, -3.47348967e-13, -0.149275154)
+	local location15 = CFrame.new (31.727417, 131.691254, 1584.55994, 0.999741077, 4.03025573e-12, 0.0227553528, -2.87305509e-12, 1, -5.08866907e-11, -0.0227553528, 5.08081389e-11, 0.999741077)
+	local location16 = CFrame.new (36.4788589, 131.691284, 1577.31128, 0.879494309, -1.28888772e-12, -0.475909442, -1.66177738e-12, 1, -5.77927463e-12, 0.475909442, 5.87369476e-12, 0.879494309)
+	local location17 = CFrame.new (44.3945313, 146.924713, 1577.9668, 0.997794271, -1.75828224e-17, 0.066382587, 2.0042262e-17, 1, -3.63835227e-17, -0.066382587, 3.76337268e-17, 0.997794271)
+	local location18 = CFrame.new (49.1918907, 146.924713, 1572.19836, 0.629463673, -1.489181e-10, 0.777029932, -4.22847729e-10, 1, 5.34194855e-10, -0.777029932, -6.64821587e-10, 0.629463673)
+	local location19 = CFrame.new (51.6436157, 146.924713, 1569.25171, 0.999444246, 8.01366826e-14, -0.0333348699, -3.06379786e-13, 1, -6.78187194e-12, 0.0333348699, 6.788316e-12, 0.999444246)
+	local location20 = CFrame.new (55.1015511, 146.924713, 1565.09558, 0.872375131, -7.38779871e-12, -0.488837004, -3.68054155e-12, 1, -2.168128e-11, 0.488837004, 2.07133945e-11, 0.872375131)
+	local location21 = CFrame.new (59.4674911, 146.924713, 1559.84802, 0.793229759, -1.59687096e-12, -0.608922422, -1.53057769e-13, 1, -2.82183868e-12, 0.608922422, 2.3315668e-12, 0.793229759)
+	local location22 = CFrame.new (63.6344528, 146.924713, 1554.85901, 0.773445845, -2.07802407e-14, -0.633862376, -5.34627715e-16, 1, -3.34358802e-14, 0.633862376, 2.61997235e-14, 0.773445845)
+	local location23 = CFrame.new (58.7010689, 146.924713, 1546.93616, 0.916969836, -1.4986558e-12, 0.398956537, 4.48513969e-12, 1, -6.55229777e-12, -0.398956537, 7.79763493e-12, 0.916969836)
+	local location24 = CFrame.new (52.3614998, 137.991394, 1540.62488, -0.972459435, -2.81263137e-08, 0.233072117, -3.80400387e-08, 1, -3.80400813e-08, -0.233072117, -4.58585099e-08, -0.972459435)
+	local location25 = CFrame.new (46.6068611, 137.991394, 1536.08044, 0.290424496, 4.74482817e-08, 0.956897914, -3.8040131e-08, 1, -3.80401062e-08, -0.956897914, -2.53527421e-08, 0.290424496)
+	local location26 = CFrame.new (41.6301537, 137.991333, 1533.03809, 0.463276207, -5.13348084e-08, 0.886213958, 3.80401559e-08, 1, 3.80401488e-08, -0.886213958, 1.6088622e-08, 0.463276207)
+	local location27 = CFrame.new (34.3892288, 137.991272, 1527.35156, 0.600141704, 5.32574198e-08, 0.799893677, -3.8040028e-08, 1, -3.80400706e-08, -0.799893677, -7.5985449e-09, 0.600141704)
+	local location28 = CFrame.new (28.7367821, 137.991272, 1522.68042, 0.630737782, -5.35122204e-08, 0.775996029, 3.80400706e-08, 1, 3.8040028e-08, -0.775996029, 5.52566215e-09, 0.630737782)
+	local location29 = CFrame.new (25.7144661, 137.991196, 1515.99939, 0.872466207, -5.17779917e-08, 0.488674462, 3.80401453e-08, 1, 3.80401524e-08, -0.488674462, -1.45995003e-08, 0.872466207)
+	local location30 = CFrame.new (22.89604, 137.991196, 1508.15808, 0.933291852, -4.9163372e-08, 0.359118789, 3.80400671e-08, 1, 3.80400209e-08, -0.359118789, -2.18415366e-08, 0.933291852)
+	local location31 = CFrame.new (27.4486122, 137.991196, 1502.65735, 0.885189533, 1.59752886e-08, -0.465230614, -3.80401204e-08, 1, -3.80401239e-08, 0.465230614, 5.13701472e-08, 0.885189533)
+	local location32 = CFrame.new (30.5294189, 137.991196, 1493.31714, 0.944079399, -2.33703137e-08, -0.329718173, 3.80400564e-08, 1, 3.80401239e-08, 0.329718173, -4.84553944e-08, 0.944079399)
+	local location33 = CFrame.new (31.8999691, 144.631485, 1483.99524, -0.129949018, 3.75595518e-12, -0.991520703, 2.00717932e-11, 1, 1.15745976e-12, 0.991520703, -1.97511885e-11, -0.129949018)
+	local location33 = CFrame.new (35.4864235, 148.814545, 1475.94153, 0.938264132, 5.65885894e-10, -0.345919728, -5.14252085e-10, 1, 2.41043324e-10, 0.345919728, -4.82723757e-11, 0.938264132)
+	local location34 = CFrame.new (32.9816284, 152.524719, 1469.97632, 0.871240497, 4.43076652e-11, 0.490856439, 8.46831494e-11, 1, -2.40573506e-10, -0.490856439, 2.51164645e-10, 0.871240497)
+	local location35 = CFrame.new (26.6851616, 152.524719, 1468.36194, 0.420355558, 5.13746554e-12, 0.907359481, 2.30156389e-12, 1, -6.72824947e-12, -0.907359481, 4.91660272e-12, 0.420355558)
+	local location36 = CFrame.new (21.8604393, 153.113266, 1462.35205, 0.294641137, -4.75595172e-08, 0.955607951, 3.80400529e-08, 1, 3.8040028e-08, -0.955607951, 2.51432191e-08, 0.294641137)
+	local location37 = CFrame.new (28.5552521, 152.524719, 1469.53418, -0.899494171, -5.08379365e-08, -0.436932802, -3.8040195e-08, 1, -3.80401772e-08, 0.436932802, -1.75959087e-08, -0.899494171)
+	local location38 = CFrame.new (34.7675323, 147.03717, 1477.77026, 0.93302989, -4.91792882e-08, -0.359798878, 3.80400458e-08, 1, -3.80401168e-08, 0.359798878, 2.18058016e-08, 0.93302989)
+	local location39 = CFrame.new (33.9384651, 142.714066, 1487.11951, -0.926764309, 6.64978003e-11, -0.375643373, 5.99802222e-11, 1, 2.90442288e-11, 0.375643373, 4.38598029e-12, -0.926764309)
+	local location40 = CFrame.new (31.8272057, 137.99118, 1496.44922, -0.975440204, -3.36751731e-13, 0.220264405, -1.60478651e-12, 1, -5.57793959e-12, -0.220264405, -5.79442397e-12, -0.975440204)
+	local location41 = CFrame.new (28.8788376, 137.99118, 1505.30164, -0.95245254, 1.01749223e-13, 0.304687023, -7.80976998e-15, 1, -3.58360043e-13, -0.304687023, -3.43700464e-13, -0.95245254)
+	local location42 = CFrame.new (26.9759579, 137.99118, 1512.20959, -0.96200192, 2.54467156e-13, 0.273042709, 1.40694612e-14, 1, -8.82397942e-13, -0.273042709, -8.45026902e-13, -0.96200192)
+	local location43 = CFrame.new (25.7778988, 137.991196, 1519.10059, -0.981596708, 2.7073645e-13, 0.190965667, 3.59961762e-14, 1, -1.23269656e-12, -0.190965667, -1.20313687e-12, -0.981596708)
+	local location44 = CFrame.new (32.5904732, 137.991272, 1525.95752, -0.778622925, -5.45426768e-12, -0.62749207, 1.2355398e-11, 1, -2.40233545e-11, 0.62749207, -2.64580493e-11, -0.778622925)
+	local location45 = CFrame.new (38.4528313, 137.991287, 1531.15356, -0.683720887, -6.42724941e-14, -0.7297436, 6.62961295e-15, 1, -9.42869508e-14, 0.7297436, -6.93038766e-14, -0.683720887)
+	local location46 = CFrame.new (38.1967125, 137.991302, 1538.98279, -0.994154036, -1.82838787e-14, -0.107970968, -1.45256308e-14, 1, -3.55944149e-14, 0.107970968, -3.38179869e-14, -0.994154036)
+	local location47 = CFrame.new (39.1513443, 126.225891, 1550.82776, 0.411091924, 5.03150552e-08, 0.911593914, -3.80401239e-08, 1, -3.80400387e-08, -0.911593914, -1.90391916e-08, 0.411091924)
+	local location48 = CFrame.new (36.8698425, 131.691223, 1559.65137, -0.919746995, 1.01872256e-16, 0.392511696, 6.86282108e-17, 1, -9.87274141e-17, -0.392511696, -6.38668666e-17, -0.919746995)
+	local location49 = CFrame.new (34.3656273, 131.691254, 1568.29492, -0.956063271, 2.43041346e-13, 0.293160319, 2.75397838e-14, 1, -7.39225413e-13, -0.293160319, -6.98672728e-13, -0.956063271)
+	local location50 = CFrame.new (32.0488586, 131.691254, 1576.29138, -0.959861875, 2.2974183e-14, 0.280473083, 3.03840009e-16, 1, -8.08724222e-14, -0.280473083, -7.75411365e-14, -0.959861875)
+	local location51 = CFrame.new (30.6576252, 131.691254, 1581.09326, -0.96030277, 3.67632204e-16, 0.278959841, 6.23441439e-20, 1, -1.31765324e-15, -0.278959841, -1.26532863e-15, -0.96030277)
+	local location52 = CFrame.new (29.0365505, 131.691254, 1586.68872, -0.960454345, 3.32974574e-17, 0.278437436, -3.15874944e-19, 1, -1.20676453e-16, -0.278437436, -1.15992176e-16, -0.960454345)
+	local location53 = CFrame.new (25.3092346, 131.691254, 1592.40771, -0.869704723, 1.46843789e-12, 0.493572354, -2.44466638e-13, 1, -3.4058869e-12, -0.493572354, -3.08277796e-12, -0.869704723)
+	local location54 = CFrame.new (28.5936775, 131.691254, 1597.59326, -0.954907715, -6.97650443e-30, -0.296902716, 4.73371058e-31, 1, -2.50200809e-29, 0.296902716, -2.40324144e-29, -0.954907715)
+	local location55 = CFrame.new (22.5305367, 131.691177, 1605.96021, -0.856743097, 8.12376533e-13, 0.515743434, -4.71610554e-12, 1, -9.40946019e-12, -0.515743434, -1.04937907e-11, -0.856743097)
+	local location56 = CFrame.new (12.1269464, 128.051392, 1619.15222, -0.752134323, 2.21286091e-19, 0.659009814, -6.69638451e-21, 1, -3.43428381e-19, -0.659009814, -2.62717241e-19, -0.752134323)
+	local location57 = CFrame.new (6.64080238, 142.824692, 1623.6377, 0.0949113742, 1.51910914e-11, 0.995485723, -6.81575369e-12, 1, -1.46101534e-11, -0.995485723, -5.39831548e-12, 0.0949113742)
+	local location58 = CFrame.new (-2.6321032, 142.824692, 1622.92969, -0.0405353718, 5.1130284e-11, 0.999178112, 7.3932813e-12, 1, -5.0872407e-11, -0.999178112, 5.32507285e-12, -0.0405353718)
+	local location59 = CFrame.new (-4.36412048, 142.824692, 1631.47925, -0.980680346, 1.8690386e-11, 0.19561702, 6.95809903e-12, 1, -6.06629955e-11, -0.19561702, -5.81298863e-11, -0.980680346)
+	local location60 = CFrame.new (-13.4278069, 142.824692, 1630.11011, -0.0360797755, 3.01737975e-11, 0.999348938, -1.09967781e-11, 1, -3.05904781e-11, -0.999348938, -1.20933159e-11, -0.0360797755)
+	local location61 = CFrame.new (-22.6565914, 117.833618, 1632.91541, -0.690570414, 6.2155185e-17, -0.723265171, 2.82179927e-17, 1, 5.89945147e-17, 0.723265171, 2.03307743e-17, -0.690570414)
+	local location62 = CFrame.new (-32.7155838, 111.423416, 1633.5708, -0.0726894885, 0, 0.997354627, 0, 1, 0, -0.997354627, 0, -0.0726894885)
+	local location63 = CFrame.new (-38.5418663, 111.423431, 1633.2843, 0.0170965493, 3.02660176e-12, 0.999853849, -1.32110753e-13, 1, -3.02478528e-12, -0.999853849, -8.03780531e-14, 0.0170965493)
+	local location64 = CFrame.new (-46.1992722, 111.423454, 1632.90784, 0.0436920114, 6.57589868e-13, 0.999045074, -9.07121549e-15, 1, -6.57821725e-13, -0.999045074, 1.96790013e-14, 0.0436920114)
+	local location65 = CFrame.new (-51.5661964, 111.423454, 1632.73657, 0.0350035839, 1.63535952e-15, 0.999387205, 5.55783398e-18, 1, -1.63655702e-15, -0.999387205, 6.28397862e-17, 0.0350035839)
+	local location66 = CFrame.new (-57.7371826, 111.423454, 1633.64417, -0.0855637565, 2.19208419e-12, 0.996332705, -1.03341043e-14, 1, -2.20104035e-12, -0.996332705, -1.98625472e-13, -0.0855637565)
+	local location67 = CFrame.new (-59.5902824, 111.423454, 1628.28394, 0.909301281, 8.54132043e-12, 0.416138411, -4.74634221e-12, 1, -1.01539905e-11, -0.416138411, 7.25790131e-12, 0.909301281)
 
--- Detects when someone executes 
 
-local webhookcheck =
-   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
-   secure_load and "Sentinel" or
-   KRNL_LOADED and "Krnl" or
-   SONA_LOADED and "Sona" or
-   "Kid with shit exploit"
+	-- Detects when someone executes 
 
-local url =
-   "https://discord.com/api/webhooks/901861795793367081/yUCQ-YeTtpqXpShCK2lbtXV1sdDtvlXiJOqGabORYAIuTiP2KnQ8rZMcjLbXahJzFdMk"
-local data = {
-   ["content"] = "-",
-   ["embeds"] = {
-       {
-           ["title"] = "**Someone Executed Your Script!**",
-           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
-           ["type"] = "rich",
-           ["color"] = tonumber(0x7269da),
-           ["image"] = {
-               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-                   tostring(game:GetService("Players").LocalPlayer.Name)
-           }
-       }
-   }
-}
-local newdata = game:GetService("HttpService"):JSONEncode(data)
+	local webhookcheck =
+	is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+	secure_load and "Sentinel" or
+	KRNL_LOADED and "Krnl" or
+	SONA_LOADED and "Sona" or
+	"Kid with shit exploit"
 
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
-
-
-
-
-
--- Blacklisting System (Pending: Vlvldz, )
-
-local playerName = game:GetService("Players").LocalPlayer.Name;
-local blacklistedNames = {
-  ["DeathShadow6345"] = true;
-  ["dontusedrealname2"] = true;
-  ["BlacklistedName3"] = true;
-  ["BlacklistedName4"] = true;
-  ["BlacklistedName5"] = true;
-  ["BlacklistedName6"] = true;
-  ["BlacklistedName7"] = true;
-  ["BlacklistedName8"] = true;
-  ["BlacklistedName9"] = true;
-  ["BlacklistedName10"] = true;
-  ["BlacklistedName11"] = true;
-}
-if (blacklistedNames[playerName]) then
-  game:GetService("Players").LocalPlayer:Kick("You are blacklisted!")
-end
-
--- Global Environments
-
-getgenv().SingleWisp = true;
-getgenv().TripleWisp = true;
-getgenv().SingleGhost = true;
-getgenv().TripleGhost = true;
-getgenv().SingleHellish = true;
-getgenv().TripleHellish = true;
-getgenv().AutoBlow = true;
-getgenv().AutoChat = true;
-getgenv().AutoChests = true;
-getgenv().AutoSell = true;
-getgenv().HideName = true;
-
--- Gui
-
-local Tab = Window:NewTab("Latest Update")
-local Section = Tab:NewSection("Check Credits")
-Section:NewButton("Owner Of Script ! Qoucx#9415", "", function()
-    if (setclipboard) then
-        setclipboard("! Qoucx#9415")
-    else
-        warn("Your exploit doesn't support 'setclipboard'")
-    end
-end)
-
-local Section = Tab:NewSection("Fixed Autofarm")
-local Section = Tab:NewSection("Added Remove Egg Animation")
-local Section = Tab:NewSection("Added A Better HideName")
-Section:NewButton("AntiAFK, U Should Still Use An Autoclicker", "", function()
-	wait()
-	loadstring(game:HttpGet("https://pastebin.com/raw/TsVgzGf5", true))()
-	print("Anti AFK Enabled. (Anti AFK Not Made By Me)")
-end)
-
-local Tab = Window:NewTab("Autofarms")
-local Section = Tab:NewSection("AutoBlow")
-Section:NewButton("Start Blowing", "Automatically Blows", function()
-	while true do wait()
-		local args = {
-			[1] = "BlowBubble"
+	local url =
+	"https://discord.com/api/webhooks/901861795793367081/yUCQ-YeTtpqXpShCK2lbtXV1sdDtvlXiJOqGabORYAIuTiP2KnQ8rZMcjLbXahJzFdMk"
+	local data = {
+	["content"] = "-",
+	["embeds"] = {
+		{
+			["title"] = "**Someone Executed Your Script!**",
+			["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
+			["type"] = "rich",
+			["color"] = tonumber(0x7269da),
+			["image"] = {
+				["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+					tostring(game:GetService("Players").LocalPlayer.Name)
+			}
 		}
+	}
+	}
+	local newdata = game:GetService("HttpService"):JSONEncode(data)
 
-		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	local headers = {
+	["content-type"] = "application/json"
+	}
+	request = http_request or request or HttpPost or syn.request
+	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+	request(abcdef)
+
+
+
+
+
+	-- Blacklisting System (Pending: Vlvldz, )
+
+	local playerName = game:GetService("Players").LocalPlayer.Name;
+	local blacklistedNames = {
+	["DeathShadow6345"] = true;
+	["dontusedrealname2"] = true;
+	["BlacklistedName3"] = true;
+	["BlacklistedName4"] = true;
+	["BlacklistedName5"] = true;
+	["BlacklistedName6"] = true;
+	["BlacklistedName7"] = true;
+	["BlacklistedName8"] = true;
+	["BlacklistedName9"] = true;
+	["BlacklistedName10"] = true;
+	["BlacklistedName11"] = true;
+	}
+	if (blacklistedNames[playerName]) then
+	game:GetService("Players").LocalPlayer:Kick("You are blacklisted!")
 	end
-end)
 
-Section:NewButton("Auto Sell Bubbles", "Automatically Sells", function()
-	wait()
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "Auto Sell"; 
-		Text = "Only Sells If Near Sell Area";
-		Duration = "5";
-	}) 
-	while true do wait()
-		local args = {
-			[1] = "SellBubble",
-			[2] = "Sell"
-		}
+	-- Global Environments
 
-		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-	end
-end)
-
-
-
-local Section = Tab:NewSection("Halloween Event")
-Section:NewButton("READ ME BEFORE AUTOFARMING", "", function()
-	wait()
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "DISCORD"; 
-		Text = "DM  ! Qoucx#9415 for Help";
-		Duration = math.huge;
-	})
-	wait()
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "READ ME"; 
-		Text = "Go through the halloween portal and stand still then turn on the autofarm"; -- what the text says (ofc)
-		Duration = math.huge;
-	})
-	wait()
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "DISCORD"; 
-		Text = "DM ! Qoucx#9415 for Help";
-		Duration = math.huge;
-	})
-end)    
-Section:NewButton("Start Autofarming", "Trick or Treat AutoFarm", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/SloExploits/unANDd2d8ndas/main/QouhuhUaWub", true))()
-end)
-
-Section:NewButton("Stop Autofarming", "AutoFarm", function()
-	getgenv().AutoFarm  = false;
-end)
-
-local Section = Tab:NewSection("Lolly Farm")
-Section:NewButton("Start Autofarming Coins/Lollipops", "AutoFarm", function()
-	
-    getgenv().LollyFarm = true;
-
-	while LollyFarm == true do 
-		wait()
-		for _,pickup in pairs(game:GetService("Workspace").Pickups:GetChildren()) do
-			if pickup:IsA("MeshPart") and (player.Position-pickup.Position).magnitude <= 50 then
-				wait()
-				player.CFrame = pickup.CFrame
-            end
-		end
-	end
-end)
-
-Section:NewButton("Stop Autofarming", "AutoFarm", function()
-    wait()
-    getgenv().LollyFarm = false;
-    wait()
-end)
-
-local Section = Tab:NewSection("Auto Chests")
-Section:NewButton("Auto Chests", "", function()
-	while AutoChests == true do 
-		local args = {
-			[1] = "CollectChestReward",
-			[2] = "The Floating Island"
-		}
-
-		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-		wait()
-		local args = {
-			[1] = "CollectChestReward",
-			[2] = "The Twilight"
-		}
-
-		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-		wait()
-		local args = {
-			[1] = "CollectChestReward",
-			[2] = "XP Island"
-		}
-
-		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-		wait()
-		local args = {
-			[1] = "CollectChestReward",
-			[2] = "The Void"
-		}
-
-		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-		wait()
-		local args = {
-			[1] = "CollectChestReward",
-			[2] = "Atlantis"
-		}
-
-		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-		wait()
-		local args = {
-			[1] = "CollectChestReward",
-			[2] = "Underworld"
-		}
-
-		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-		wait()
-		local args = {
-			[1] = "CollectChestReward",
-			[2] = "Rainbow Land"
-		}
-
-		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-		wait()
-		local args = {
-			[1] = "CollectChestReward",
-			[2] = "Mystic Forest"
-		}
-
-		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-		wait()
-		local args = {
-			[1] = "CollectChestReward",
-			[2] = "Toy Land"
-		}
-
-		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-		wait()
-		local args = {
-			[1] = "CollectChestReward",
-			[2] = "Candy Land"
-		}
-
-		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-		wait()
-		local args = {
-			[1] = "CollectChestReward",
-			[2] = "Beach World"
-		}
-
-		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-
-	end
-end)
-
-Section:NewButton("Stop Auto Chests", "", function()
-	getgenv().AutoChests = false;
-end)
-
-local Tab = Window:NewTab("Eggs")
-local Section = Tab:NewSection("Delete Egg Animation")
-Section:NewButton("Remove Egg Animation (No Lag)", "", function()
-	wait()
-    game:GetService("ReplicatedStorage").Assets.Eggs:Destroy()
-end)
-
-local Section = Tab:NewSection("Wisp Egg")
-Section:NewButton("Enable Hatching Again", "", function()
 	getgenv().SingleWisp = true;
 	getgenv().TripleWisp = true;
 	getgenv().SingleGhost = true;
 	getgenv().TripleGhost = true;
 	getgenv().SingleHellish = true;
 	getgenv().TripleHellish = true;
-end)
+	getgenv().AutoBlow = true;
+	getgenv().AutoChat = true;
+	getgenv().AutoChests = true;
+	getgenv().AutoSell = true;
+	getgenv().HideName = true;
+	getgenv().AutoFarm = true;
 
-Section:NewButton("Stop Hatching", "", function()
-	getgenv().SingleWisp = false;
-	getgenv().TripleWisp = false;
-	getgenv().SingleGhost = false;
-	getgenv().TripleGhost = false;
-	getgenv().SingleHellish = false;
-	getgenv().TripleHellish = false;
-end)
+	-- Gui
 
-Section:NewButton("Single Hatch Wisp Egg", "", function()
-	while SingleWisp == true do 
+	local Tab = Window:NewTab("Latest Update")
+	local Section = Tab:NewSection("Check Credits")
+	Section:NewButton("Owner Of Script ! Qoucx#9415", "", function()
+		if (setclipboard) then
+			setclipboard("! Qoucx#9415")
+		else
+			warn("Your exploit doesn't support 'setclipboard'")
+		end
+	end)
+
+	local Section = Tab:NewSection("Fixed Autofarm")
+	local Section = Tab:NewSection("Added Remove Egg Animation")
+	local Section = Tab:NewSection("Added A Better HideName")
+	Section:NewButton("AntiAFK, U Should Still Use An Autoclicker", "", function()
+		wait()
+		loadstring(game:HttpGet("https://pastebin.com/raw/TsVgzGf5", true))()
+		print("Anti AFK Enabled. (Anti AFK Not Made By Me)")
+	end)
+
+	local Tab = Window:NewTab("Autofarms")
+	local Section = Tab:NewSection("AutoBlow")
+	Section:NewButton("Start Blowing", "Automatically Blows", function()
+		while true do wait()
+			local args = {
+				[1] = "BlowBubble"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+
+	Section:NewButton("Auto Sell Bubbles", "Automatically Sells", function()
+		wait()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Auto Sell"; 
+			Text = "Only Sells If Near Sell Area";
+			Duration = "5";
+		}) 
+		while true do wait()
+			local args = {
+				[1] = "SellBubble",
+				[2] = "Sell"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+
+
+
+	local Section = Tab:NewSection("Halloween Event")
+	Section:NewButton("READ ME BEFORE AUTOFARMING", "", function()
+		wait()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "DISCORD"; 
+			Text = "DM  ! Qoucx#9415 for Help";
+			Duration = math.huge;
+		})
+		wait()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "READ ME"; 
+			Text = "Go through the halloween portal and stand still then turn on the autofarm"; -- what the text says (ofc)
+			Duration = math.huge;
+		})
+		wait()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "DISCORD"; 
+			Text = "DM ! Qoucx#9415 for Help";
+			Duration = math.huge;
+		})
+	end)    
+	Section:NewButton("Start Autofarming", "Trick or Treat AutoFarm", function()
+		wait()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/1298jd218h1e1383121298jd218h1e138312/unANDd2d8ndas/main/Autofarm", true))()
+		wait()
+	end)
+
+	Section:NewButton("Stop Autofarming", "AutoFarm", function()
+		getgenv().AutoFarm  = false;
+	end)
+
+	local Section = Tab:NewSection("Lolly Farm")
+	Section:NewButton("Start Autofarming Coins/Lollipops", "AutoFarm", function()
+		
+		getgenv().LollyFarm = true;
+
+		while LollyFarm == true do 
+			wait()
+			for _,pickup in pairs(game:GetService("Workspace").Pickups:GetChildren()) do
+				if pickup:IsA("MeshPart") and (player.Position-pickup.Position).magnitude <= 50 then
+					wait()
+					player.CFrame = pickup.CFrame
+				end
+			end
+		end
+	end)
+
+	Section:NewButton("Stop Autofarming", "AutoFarm", function()
+		wait()
+		getgenv().LollyFarm = false;
+		wait()
+	end)
+
+	local Section = Tab:NewSection("Auto Chests")
+	Section:NewButton("Auto Chests", "", function()
+		while AutoChests == true do 
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "The Floating Island"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "The Twilight"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "XP Island"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "The Void"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Atlantis"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Underworld"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Rainbow Land"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Mystic Forest"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Toy Land"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Candy Land"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Beach World"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+
+		end
+	end)
+
+	Section:NewButton("Stop Auto Chests", "", function()
+		getgenv().AutoChests = false;
+	end)
+
+	local Tab = Window:NewTab("Eggs")
+	local Section = Tab:NewSection("Delete Egg Animation")
+	Section:NewButton("Remove Egg Animation (No Lag)", "", function()
+		wait()
+		game:GetService("ReplicatedStorage").Assets.Eggs:Destroy()
+	end)
+
+	local Section = Tab:NewSection("Wisp Egg")
+	Section:NewButton("Enable Hatching Again", "", function()
+		getgenv().SingleWisp = true;
+		getgenv().TripleWisp = true;
+		getgenv().SingleGhost = true;
+		getgenv().TripleGhost = true;
+		getgenv().SingleHellish = true;
+		getgenv().TripleHellish = true;
+	end)
+
+	Section:NewButton("Stop Hatching", "", function()
+		getgenv().SingleWisp = false;
+		getgenv().TripleWisp = false;
+		getgenv().SingleGhost = false;
+		getgenv().TripleGhost = false;
+		getgenv().SingleHellish = false;
+		getgenv().TripleHellish = false;
+	end)
+
+	Section:NewButton("Single Hatch Wisp Egg", "", function()
+		while SingleWisp == true do 
+			wait()
+			local args = {
+				[1] = "PurchaseEgg",
+				[2] = "Wisp Egg"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+
+	Section:NewButton("Triple Hatch Wisp Egg", "", function()
+		while TripleWisp == true do 
+			wait()
+			local args = {
+				[1] = "PurchaseEgg",
+				[2] = "Wisp Egg",
+				[3] = "Multi"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+
+		end
+	end)
+
+	local Section = Tab:NewSection("Ghost Egg")
+
+	Section:NewButton("Single Hatch Ghost Egg", "", function()
+		while SingleGhost == true do
+			wait()
+			local args = {
+				[1] = "PurchaseEgg",
+				[2] = "Ghost Egg"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+
+	Section:NewButton("Triple Hatch Ghost Egg", "", function()
+		while TripleGhost == true do
+			wait()
+			local args = {
+				[1] = "PurchaseEgg",
+				[2] = "Ghost Egg",
+				[3] = "Multi"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+
+	local Section = Tab:NewSection("Hellish Egg")
+	Section:NewButton("Triple Hatch Hellish Egg", "", function()
+		while TripleHellish == true do
+			wait()
+			local args = {
+				[1] = "PurchaseEgg",
+				[2] = "Hellish Egg",
+				[3] = "Multi"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+
+	Section:NewButton("Single Hatch Hellish Egg", "", function()
+		while SingleHellish == true do
+			wait()
+			local args = {
+				[1] = "PurchaseEgg",
+				[2] = "Hellish Egg"
+			}
+
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+
+	local Tab = Window:NewTab("Teleports")
+	local Section = Tab:NewSection("Worlds")
+	Section:NewButton("Floating Island", "", function()
 		wait()
 		local args = {
-			[1] = "PurchaseEgg",
-			[2] = "Wisp Egg"
+			[1] = "TeleportToCheckpoint",
+			[2] = "The Floating Island"
 		}
 
 		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-	end
-end)
+	end)
 
-Section:NewButton("Triple Hatch Wisp Egg", "", function()
-	while TripleWisp == true do 
+	Section:NewButton("Halloween World", "", function()
 		wait()
 		local args = {
-			[1] = "PurchaseEgg",
-			[2] = "Wisp Egg",
-			[3] = "Multi"
+			[1] = "Teleport",
+			[2] = "EventSpawn"
 		}
 
 		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	end)
 
-	end
-end)
-
-local Section = Tab:NewSection("Ghost Egg")
-
-Section:NewButton("Single Hatch Ghost Egg", "", function()
-	while SingleGhost == true do
+	Section:NewButton("Space", "", function()
 		wait()
 		local args = {
-			[1] = "PurchaseEgg",
-			[2] = "Ghost Egg"
+			[1] = "TeleportToCheckpoint",
+			[2] = "Space"
 		}
 
 		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-	end
-end)
+	end)
 
-Section:NewButton("Triple Hatch Ghost Egg", "", function()
-	while TripleGhost == true do
+	Section:NewButton("The Twilight", "", function()
 		wait()
 		local args = {
-			[1] = "PurchaseEgg",
-			[2] = "Ghost Egg",
-			[3] = "Multi"
+			[1] = "TeleportToCheckpoint",
+			[2] = "The Twilight"
 		}
 
 		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-	end
-end)
-
-local Section = Tab:NewSection("Hellish Egg")
-Section:NewButton("Triple Hatch Hellish Egg", "", function()
-	while TripleHellish == true do
+	end)
+	Section:NewButton("The Skylands", "", function()
 		wait()
 		local args = {
-			[1] = "PurchaseEgg",
-			[2] = "Hellish Egg",
-			[3] = "Multi"
+			[1] = "TeleportToCheckpoint",
+			[2] = "The Skylands"
 		}
 
 		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-	end
-end)
-
-Section:NewButton("Single Hatch Hellish Egg", "", function()
-	while SingleHellish == true do
+	end)
+	Section:NewButton("Zen", "", function()
 		wait()
 		local args = {
-			[1] = "PurchaseEgg",
-			[2] = "Hellish Egg"
+			[1] = "TeleportToCheckpoint",
+			[2] = "Zen"
 		}
 
 		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-	end
-end)
+	end)
 
-local Tab = Window:NewTab("Teleports")
-local Section = Tab:NewSection("Worlds")
-Section:NewButton("Floating Island", "", function()
-	wait()
-	local args = {
-		[1] = "TeleportToCheckpoint",
-		[2] = "The Floating Island"
-	}
-
-	game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-end)
-
-Section:NewButton("Halloween World", "", function()
-	wait()
-	local args = {
-		[1] = "Teleport",
-		[2] = "EventSpawn"
-	}
-
-	game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-end)
-
-Section:NewButton("Space", "", function()
-	wait()
-	local args = {
-		[1] = "TeleportToCheckpoint",
-		[2] = "Space"
-	}
-
-	game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-end)
-
-Section:NewButton("The Twilight", "", function()
-	wait()
-	local args = {
-		[1] = "TeleportToCheckpoint",
-		[2] = "The Twilight"
-	}
-
-	game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-end)
-Section:NewButton("The Skylands", "", function()
-	wait()
-	local args = {
-		[1] = "TeleportToCheckpoint",
-		[2] = "The Skylands"
-	}
-
-	game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-end)
-Section:NewButton("Zen", "", function()
-	wait()
-	local args = {
-		[1] = "TeleportToCheckpoint",
-		[2] = "Zen"
-	}
-
-	game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-end)
-
-Section:NewButton("The Void", "", function()
-	wait()
-	local args = {
-		[1] = "TeleportToCheckpoint",
-		[2] = "The Void"
-	}
-
-	game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-end)
-
-Section:NewButton("XP Island", "", function()
-	wait()
-	local args = {
-		[1] = "TeleportToCheckpoint",
-		[2] = "XP Island"
-	}
-
-	game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-end)
-
-Section:NewButton("Candy World", "", function()
-	wait()
-	local args = {
-		[1] = "Teleport",
-		[2] = "Candy LandSpawn"
-	}
-
-	game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
-end)
-
-
-
-
-local Tab = Window:NewTab("Local Player")
-local Section = Tab:NewSection("LocalPlayer Scripts")
-Section:NewSlider("Walkspeed", "Walkspeed", 100, 24, function(s) -- 500 (MaxValue) | 0 (MinValue)
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
-
-Section:NewSlider("Jumppower", "Jumppower", 250, 65, function(s) -- 500 (MaxValue) | 0 (MinValue)
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower= s
-end)
-
-Section:NewSlider("FOV", "Field Of View", 120, 70, function(s) -- 500 (MaxValue) | 0 (MinValue)
-	game.Workspace.Camera.FieldOfView = s
-end)
-
-Section:NewButton("Auto Speak", "", function()
-	wait(0.5)
-	getgenv().AutoChat = true;  
-	wait()      
-	while AutoChat == true do
-		wait(2.5)
+	Section:NewButton("The Void", "", function()
+		wait()
 		local args = {
-			[1] = "Qoucx Winning!",
-			[2] = "All"
+			[1] = "TeleportToCheckpoint",
+			[2] = "The Void"
 		}
 
-		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-	end
-end)
+		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	end)
 
-Section:NewButton("Stop Auto Speak", "", function()
-	wait()
-	getgenv().AutoChat = false;
-	wait(1)
-	getgenv.AutoChat = true;
-end)
+	Section:NewButton("XP Island", "", function()
+		wait()
+		local args = {
+			[1] = "TeleportToCheckpoint",
+			[2] = "XP Island"
+		}
 
-Section:NewButton("Hide Name", "", function()
-	game.Players.LocalPlayer.Name = "Anonymous"
-	wait()
-	game.Players.LocalPlayer.DisplayName = "Anonymous"
-	wait()
-	game:GetService("Players").LocalPlayer.Character.Head.CustomPlayerTag.Enabled = false
-end)    
+		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	end)
 
+	Section:NewButton("Candy World", "", function()
+		wait()
+		local args = {
+			[1] = "Teleport",
+			[2] = "Candy LandSpawn"
+		}
 
-
-
-
-
-local Tab = Window:NewTab("Settings")
-local Section = Tab:NewSection("Settings")
-Section:NewKeybind("Toggle UI", "Toggles the User Interface", Enum.KeyCode.F, function()
-	Library:ToggleUI()
-end)
-
-Section:NewButton("READ BEFORE FPS BOOST", "", function()
-	wait()
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "FPS Boost"; 
-		Text = "Only use if you are going to go afk, you cannot undo this.";
-		Duration = "5";
-	}) 
-end)
+		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	end)
 
 
 
 
-Section:NewButton("Better FPS When Hatching", "", function()
-	local ScreenGui = Instance.new("ScreenGui")
-	local Frame = Instance.new("Frame")
-	local TextLabel = Instance.new("TextLabel")
-	local TextLabel_2 = Instance.new("TextLabel")
+	local Tab = Window:NewTab("Local Player")
+	local Section = Tab:NewSection("LocalPlayer Scripts")
+	Section:NewSlider("Walkspeed", "Walkspeed", 100, 24, function(s) -- 500 (MaxValue) | 0 (MinValue)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+	end)
 
-	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	Section:NewSlider("Jumppower", "Jumppower", 250, 65, function(s) -- 500 (MaxValue) | 0 (MinValue)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower= s
+	end)
 
-	Frame.Parent = ScreenGui
-	Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Frame.Position = UDim2.new(0.0672727302, 0, 0.185964912, 0)
-	Frame.Size = UDim2.new(0, 589, 0, 129)
+	Section:NewSlider("FOV", "Field Of View", 120, 70, function(s) -- 500 (MaxValue) | 0 (MinValue)
+		game.Workspace.Camera.FieldOfView = s
+	end)
 
-	TextLabel.Parent = Frame
-	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel.Position = UDim2.new(0.0305361822, 0, 0.07751479, 0)
-	TextLabel.Size = UDim2.new(0, 552, 0, 50)
-	TextLabel.Font = Enum.Font.SourceSans
-	TextLabel.Text = "You cannot reverse this are you sure : I recommend only using if you are going to afk grind and sleep"
-	TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-	TextLabel.TextSize = 14.000
+	Section:NewButton("Auto Speak", "", function()
+		wait(0.5)
+		getgenv().AutoChat = true;  
+		wait()      
+		while AutoChat == true do
+			wait(2.5)
+			local args = {
+				[1] = "Qoucx Winning!",
+				[2] = "All"
+			}
 
-	TextLabel_2.Parent = TextLabel
-	TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_2.Position = UDim2.new(-0.000260919333, 0, 1.17751479, 0)
-	TextLabel_2.Size = UDim2.new(0, 552, 0, 50)
-	TextLabel_2.Font = Enum.Font.SourceSans
-	TextLabel_2.Text = "There is 10 Seconds Until it FPS Boosts"
-	TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-	TextLabel_2.TextSize = 14.000
+			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+		end
+	end)
 
-	wait(10)
-	local SloGui = Instance.new("ScreenGui")
-	local Frame2 = Instance.new("Frame")
-	local TextLabel = Instance.new("TextLabel")
+	Section:NewButton("Stop Auto Speak", "", function()
+		wait()
+		getgenv().AutoChat = false;
+		wait(1)
+		getgenv.AutoChat = true;
+	end)
 
-	SloGui.Name = "SloGui"
-	SloGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-	SloGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	Section:NewButton("Hide Name", "", function()
+		game.Players.LocalPlayer.Name = "Anonymous"
+		wait()
+		game.Players.LocalPlayer.DisplayName = "Anonymous"
+		wait()
+		game:GetService("Players").LocalPlayer.Character.Head.CustomPlayerTag.Enabled = false
+	end)    
 
-	Frame2.Parent = SloGui
-	Frame2.BackgroundColor3 = Color3.fromRGB(1, 1, 1)
-	Frame2.Size = UDim2.new(0, 1920, 0, 1080)
 
-	TextLabel.Parent = Frame
-	TextLabel.BackgroundColor3 = Color3.fromRGB(1, 1, 1)
-	TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	TextLabel.BorderSizePixel = 0
-	TextLabel.Position = UDim2.new(0.324156284, 0, 0.423391819, 0)
-	TextLabel.Size = UDim2.new(0, 396, 0, 130)
-	TextLabel.Font = Enum.Font.SourceSans
-	TextLabel.Text = "You have disabled your screen for better FPS"
-	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel.TextSize = 14.000      
-end)
 
-local Tab = Window:NewTab("Trolling")
-local Section = Tab:NewSection("Troll")
-Section:NewButton("1st On Competitive Leaderboards", "", function()
-	game:GetService("Workspace").Competitive.Boards.EggBoard.SurfaceGui.Frame.ScrollingFrame["1"].NameBacking.PlayerName.Text = (CrntPlr.DisplayName)
-end)    
 
-local Tab = Window:NewTab("Credits")
-local Section = Tab:NewSection("! Qoucx#9415 - Owner and Scripter")
-local Section = Tab:NewSection("YouBuggin#0001 - Helped me debug")
+
+
+	local Tab = Window:NewTab("Settings")
+	local Section = Tab:NewSection("Settings")
+	Section:NewKeybind("Toggle UI", "Toggles the User Interface", Enum.KeyCode.F, function()
+		Library:ToggleUI()
+	end)
+
+	Section:NewButton("READ BEFORE FPS BOOST", "", function()
+		wait()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "FPS Boost"; 
+			Text = "Only use if you are going to go afk, you cannot undo this.";
+			Duration = "5";
+		}) 
+	end)
+
+
+
+
+	Section:NewButton("Better FPS When Hatching", "", function()
+		local ScreenGui = Instance.new("ScreenGui")
+		local Frame = Instance.new("Frame")
+		local TextLabel = Instance.new("TextLabel")
+		local TextLabel_2 = Instance.new("TextLabel")
+
+		ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+		ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+		Frame.Parent = ScreenGui
+		Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame.Position = UDim2.new(0.0672727302, 0, 0.185964912, 0)
+		Frame.Size = UDim2.new(0, 589, 0, 129)
+
+		TextLabel.Parent = Frame
+		TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.Position = UDim2.new(0.0305361822, 0, 0.07751479, 0)
+		TextLabel.Size = UDim2.new(0, 552, 0, 50)
+		TextLabel.Font = Enum.Font.SourceSans
+		TextLabel.Text = "You cannot reverse this are you sure : I recommend only using if you are going to afk grind and sleep"
+		TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel.TextSize = 14.000
+
+		TextLabel_2.Parent = TextLabel
+		TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_2.Position = UDim2.new(-0.000260919333, 0, 1.17751479, 0)
+		TextLabel_2.Size = UDim2.new(0, 552, 0, 50)
+		TextLabel_2.Font = Enum.Font.SourceSans
+		TextLabel_2.Text = "There is 10 Seconds Until it FPS Boosts"
+		TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_2.TextSize = 14.000
+
+		wait(10)
+		local SloGui = Instance.new("ScreenGui")
+		local Frame2 = Instance.new("Frame")
+		local TextLabel = Instance.new("TextLabel")
+
+		SloGui.Name = "SloGui"
+		SloGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+		SloGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+		Frame2.Parent = SloGui
+		Frame2.BackgroundColor3 = Color3.fromRGB(1, 1, 1)
+		Frame2.Size = UDim2.new(0, 1920, 0, 1080)
+
+		TextLabel.Parent = Frame
+		TextLabel.BackgroundColor3 = Color3.fromRGB(1, 1, 1)
+		TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+		TextLabel.BorderSizePixel = 0
+		TextLabel.Position = UDim2.new(0.324156284, 0, 0.423391819, 0)
+		TextLabel.Size = UDim2.new(0, 396, 0, 130)
+		TextLabel.Font = Enum.Font.SourceSans
+		TextLabel.Text = "You have disabled your screen for better FPS"
+		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.TextSize = 14.000      
+	end)
+
+	local Tab = Window:NewTab("Trolling")
+	local Section = Tab:NewSection("Troll")
+	Section:NewButton("1st On Competitive Leaderboards", "", function()
+		game:GetService("Workspace").Competitive.Boards.EggBoard.SurfaceGui.Frame.ScrollingFrame["1"].NameBacking.PlayerName.Text = (CrntPlr.DisplayName)
+	end)    
+
+	local Tab = Window:NewTab("Credits")
+	local Section = Tab:NewSection("! Qoucx#9415 - Owner and Scripter")
+	local Section = Tab:NewSection("YouBuggin#0001 - Helped me debug")
+end
