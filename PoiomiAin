@@ -4,10 +4,10 @@ local player = game.Players.LocalPlayer.Character.HumanoidRootPart
 local CrntPlr = game.Players.LocalPlayer
 
 -- Kicks when update
-local startingid = syn.request({Method="GET",Url="https://raw.githubusercontent.com/SloExploits/BGS-AutoFarm/main/BGS%20GUI"}).Body
+local startingid = syn.request({Method="GET",Url="https://raw.githubusercontent.com/SloExploits/unANDd2d8ndas/main/PoiomiAin"}).Body
 spawn(function()
 	while wait(4) do
-		if startingid ~= syn.request({Method="GET",Url="https://raw.githubusercontent.com/SloExploits/BGS-AutoFarm/main/BGS%20GUI"}).Body then
+		if startingid ~= syn.request({Method="GET",Url="https://raw.githubusercontent.com/SloExploits/unANDd2d8ndas/main/PoiomiAin"}).Body then
 			game.Players.LocalPlayer:Kick("Script has been updated, Rejoin and Execute")
 		end
 	end
