@@ -3,16 +3,6 @@ local Window = Library.CreateLib("Qoucx Hub BGS", "DarkTheme")
 local player = game.Players.LocalPlayer.Character.HumanoidRootPart
 local CrntPlr = game.Players.LocalPlayer
 
--- Kicks when update
-local startingid = syn.request({Method="GET",Url="https://raw.githubusercontent.com/SloExploits/BGS-AutoFarm/main/BGS%20GUI"}).Body
-spawn(function()
-	while wait(4) do
-		if startingid ~= syn.request({Method="GET",Url="https://raw.githubusercontent.com/SloExploits/BGS-AutoFarm/main/BGS%20GUI"}).Body then
-			game.Players.LocalPlayer:Kick("Script has been updated, Rejoin and Execute")
-		end
-	end
-end)
-
 -- Detects when someone executes 
 
 local webhookcheck =
@@ -52,7 +42,7 @@ request(abcdef)
 
 
 
--- Blacklisting System 
+-- Blacklisting System (Pending: Vlvldz, )
 
 local playerName = game:GetService("Players").LocalPlayer.Name;
 local blacklistedNames = {
@@ -72,11 +62,33 @@ if (blacklistedNames[playerName]) then
   game:GetService("Players").LocalPlayer:Kick("You are blacklisted!")
 end
 
+-- Global Environments
+
+getgenv().SingleWisp = true;
+getgenv().TripleWisp = true;
+getgenv().SingleGhost = true;
+getgenv().TripleGhost = true;
+getgenv().SingleHellish = true;
+getgenv().TripleHellish = true;
+getgenv().AutoBlow = true;
+getgenv().AutoChat = true;
+getgenv().AutoChests = true;
+getgenv().AutoSell = true;
+getgenv().HideName = true;
+
 -- Gui
 
 local Tab = Window:NewTab("Latest Update")
 local Section = Tab:NewSection("Made by ! Qoucx#9415")
 local Section = Tab:NewSection("Fixed Autofarm")
+local Section = Tab:NewSection("Added Remove Egg Animation")
+local Section = Tab:NewSection("Fixed Eggs")
+local Section = Tab:NewSection("Added Anti-AFK (Sometimes Stops) ")
+Section:NewButton("AntiAFK, U Should Still Use An Autoclicker", "", function()
+	wait()
+	loadstring(game:HttpGet("https://pastebin.com/raw/TsVgzGf5", true))()
+	print("Anti AFK Enabled. (Anti AFK Not Made By Me)")
+end)
 
 local Tab = Window:NewTab("Autofarms")
 local Section = Tab:NewSection("AutoBlow")
@@ -131,7 +143,7 @@ Section:NewButton("READ ME BEFORE AUTOFARMING", "", function()
 	})
 end)    
 Section:NewButton("Start Autofarming", "Trick or Treat AutoFarm", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/1298jd218h1e1383121298jd218h1e138312/unANDd2d8ndas/main/Autofarm", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/SloExploits/unANDd2d8ndas/main/QouhuhUaWub", true))()
 end)
 
 Section:NewButton("Stop Autofarming", "AutoFarm", function()
@@ -248,6 +260,12 @@ Section:NewButton("Stop Auto Chests", "", function()
 end)
 
 local Tab = Window:NewTab("Eggs")
+local Section = Tab:NewSection("Delete Egg Animation")
+Section:NewButton("Remove Egg Animation (No Lag)", "", function()
+	wait()
+    game:GetService("ReplicatedStorage").Assets.Eggs:Destroy()
+end)
+
 local Section = Tab:NewSection("Wisp Egg")
 Section:NewButton("Enable Hatching Again", "", function()
 	getgenv().SingleWisp = true;
@@ -440,7 +458,7 @@ end)
 
 
 local Tab = Window:NewTab("Local Player")
-local Section = Tab:NewSection("Speed + JumpPower")
+local Section = Tab:NewSection("LocalPlayer Scripts")
 Section:NewSlider("Walkspeed", "Walkspeed", 100, 24, function(s) -- 500 (MaxValue) | 0 (MinValue)
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
@@ -479,6 +497,8 @@ Section:NewButton("Hide Name", "", function()
 	game.Players.LocalPlayer.Name = "Anonymous"
 	wait()
 	game.Players.LocalPlayer.DisplayName = "Anonymous"
+	wait()
+	game:GetService("Players").LocalPlayer.Character.Head.CustomPlayerTag.Enabled = false
 end)    
 
 
