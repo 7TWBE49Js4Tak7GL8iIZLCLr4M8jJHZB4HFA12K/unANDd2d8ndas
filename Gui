@@ -79,11 +79,18 @@ getgenv().HideName = true;
 -- Gui
 
 local Tab = Window:NewTab("Latest Update")
-local Section = Tab:NewSection("Made by ! Qoucx#9415")
+local Section = Tab:NewSection("Check Credits")
+Section:NewButton("Owner Of Script ! Qoucx#9415", "", function()
+    if (setclipboard) then
+        setclipboard("! Qoucx#9415")
+    else
+        warn("Your exploit doesn't support 'setclipboard'")
+    end
+end)
+
 local Section = Tab:NewSection("Fixed Autofarm")
 local Section = Tab:NewSection("Added Remove Egg Animation")
-local Section = Tab:NewSection("Fixed Eggs")
-local Section = Tab:NewSection("Added Anti-AFK (Sometimes Stops) ")
+local Section = Tab:NewSection("Added A Better HideName")
 Section:NewButton("AntiAFK, U Should Still Use An Autoclicker", "", function()
 	wait()
 	loadstring(game:HttpGet("https://pastebin.com/raw/TsVgzGf5", true))()
