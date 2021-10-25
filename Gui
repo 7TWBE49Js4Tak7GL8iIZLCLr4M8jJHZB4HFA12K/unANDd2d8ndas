@@ -1,6 +1,6 @@
 if game.PlaceId == 2512643572 then
 	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-	local Window = Library.CreateLib("Qoucx Hub BGS", "DarkTheme")
+	local Window = Library.CreateLib("Qoucx Hub BGS", "Sentinel")
 	local player = game.Players.LocalPlayer.Character.HumanoidRootPart
 	local CrntPlr = game.Players.LocalPlayer
 	local player = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -598,7 +598,7 @@ end)
 
 elseif game.PlaceId == 137877687 then 
 	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-	local Window = Library.CreateLib("Qoucx Hub RoCitizens", "DarkTheme")
+	local Window = Library.CreateLib("Qoucx Hub RoCitizens", "Sentinel")
 	local player = game.Players.LocalPlayer.Character.HumanoidRootPart
 	local CrntPlr = game.Players.LocalPlayer
 	local Burger = CFrame.new (-5342.27295, 6.16413927, 4462.93604, -0.0436534584, -2.0773447e-08, -0.999046743, 3.88718391e-08, 1, -2.24917773e-08, 0.999046743, -3.981663e-08, -0.0436534584)
@@ -696,6 +696,28 @@ elseif game.PlaceId == 137877687 then
 		getgenv().AutoBuy = false;
 	end)
 
-elseif game.PlaceId == 1512515 then
-	print("Not Ready")
+elseif game.PlaceId == 286090429 then
+	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+	local Window = Library.CreateLib("Qoucx Hub Arsenal", "Sentinel")
+	local Tab = Window:NewTab("Latest Update")
+	local Section = Tab:NewSection("Latest Update")
+	local Section = Tab:NewSection("Release.")
+	Section:NewButton("Owner Of Script ! Qoucx#9415", "", function()
+		if (setclipboard) then
+			setclipboard("! Qoucx#9415")
+		else
+			warn("Your exploit doesn't support 'setclipboard'")
+		end
+	end)
+
+	local Tab = Window:NewTab("Silent Aim + ESP")
+	local Section = Tab:NewSection("Silent Aim + ESP")
+	Section:NewButton("Silent Aim", "", function()
+		loadstring(game:HttpGet('https://pastebin.com/raw/FuXqmMtD'))()
+	end)
+
+Section:NewButton("ESP", "", function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/hzhXZCDp", true))()
+end)
 end
+
