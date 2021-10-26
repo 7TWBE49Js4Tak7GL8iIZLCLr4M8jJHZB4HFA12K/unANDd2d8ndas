@@ -1,0 +1,1189 @@
+if game.PlaceId == 2512643572 then
+	
+	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+	local Window = Library.CreateLib("Qoucx Hub Premium BGS", "Sentinel")
+	local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local CrntPlr = game.Players.LocalPlayer
+	local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+	
+	-- bgs hatcher weebhook thing
+	
+	local Webhook = "https://discord.com/api/webhooks/902287931467763733/JMB-Tck28Aq5OK4FbXWzxXvvmc5_Si997zZm0p9vPv5lweKzzfddnnARbMW5oz2bV40j" -- Paste your Webhook link in the quotations
+	
+	local function rgbToHex(rgb)
+	local hexadecimal = '0X'
+	for key, value in pairs(rgb) do
+	local hex = ''
+	while(value > 0)do
+	local index = math.fmod(value, 16) + 1
+	value = math.floor(value / 16)
+	hex = string.sub('0123456789ABCDEF', index, index) .. hex
+	end
+	if(string.len(hex) == 0)then
+	hex = '00'
+	elseif(string.len(hex) == 1)then
+	hex = '0' .. hex
+	end
+	hexadecimal = hexadecimal .. hex
+	end
+	return hexadecimal
+	end
+	
+	local Headers = {["content-type"] = "application/json"}
+	local Chat = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatChannelParentFrame["Frame_MessageLogDisplay"].Scroller
+	
+	Chat.ChildAdded:Connect(function(instance)
+	if string.find(instance.TextLabel.Text,"[Server]") then
+		local TextColor3 = instance.TextLabel.TextColor3
+		local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+		local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+		local Info = {["content"] = "",["embeds"] = {{["title"] = instance.TextLabel.Text,["color"] = Hex,["fields"] = {}},}}
+		local Info = game:GetService("HttpService"):JSONEncode(Info)
+		local HttpRequest = http_request;
+		if syn then HttpRequest = syn.request else HttpRequest = http_request end
+			HttpRequest({Url=Webhook, Body=Info, Method="POST", Headers=Headers})
+	end
+	end)
+	
+	-- Detects when someone executes 
+	
+	local webhookcheck =
+	is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+	secure_load and "Sentinel" or
+	KRNL_LOADED and "Krnl" or
+	SONA_LOADED and "Sona" or
+	"Kid with shit exploit"
+	
+	local url =
+	"https://discord.com/api/webhooks/901861795793367081/yUCQ-YeTtpqXpShCK2lbtXV1sdDtvlXiJOqGabORYAIuTiP2KnQ8rZMcjLbXahJzFdMk"
+	local data = {
+	["content"] = "-",
+	["embeds"] = {
+		{
+			["title"] = "**Someone Executed Your Script!**",
+			["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
+			["type"] = "rich",
+			["color"] = tonumber(0x7269da),
+			["image"] = {
+				["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+					tostring(game:GetService("Players").LocalPlayer.Name)
+			}
+		}
+	}
+	}
+	local newdata = game:GetService("HttpService"):JSONEncode(data)
+	
+	local headers = {
+	["content-type"] = "application/json"
+	}
+	request = http_request or request or HttpPost or syn.request
+	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+	request(abcdef)
+	
+	
+	
+	
+	
+	-- Whitelist System (Pending:, )
+	
+	local playerName = game:GetService("Players").LocalPlayer.Name;
+	local whitelistedNames = {
+	["Cmoney4802"] = true;
+	["Qoucx"] = true;
+	["Playrobloxm1"] = true;
+	["AvaPxver"] = true;
+	["BlacklistedName5"] = true;
+	["BlacklistedName6"] = true;
+	["BlacklistedName7"] = true;
+	["BlacklistedName8"] = true;
+	["BlacklistedName9"] = true;
+	["BlacklistedName10"] = true;
+	["BlacklistedName11"] = true;
+	}
+	if not (whitelistedNames[playerName]) then
+	game:GetService("Players").LocalPlayer:Kick("You are not whitelisted!")
+	end
+	
+	-- Global Environments
+	
+	getgenv().SingleWisp = true;
+	getgenv().TripleWisp = true;
+	getgenv().SingleGhost = true;
+	getgenv().TripleGhost = true;
+	getgenv().SingleHellish = true;
+	getgenv().TripleHellish = true;
+	getgenv().AutoBlow = true;
+	getgenv().AutoChat = true;
+	getgenv().AutoChests = true;
+	getgenv().AutoSell = true;
+	getgenv().HideName = true;
+	getgenv().AutoFarm = true;
+	getgenv().AutoKnock = true;
+	getgenv().AutoClaimQ = true;
+	getgenv().AutoSel = true;
+	getgenv().AutoSpin = true;
+	
+	-- Gui
+	
+	local Tab = Window:NewTab("Latest Update")
+	
+	local Section = Tab:NewSection("Check Credits")
+	Section:NewButton("Owner Of Script ! Qoucx#9415", "", function()
+		if (setclipboard) then
+			setclipboard("! Qoucx#9415")
+		else
+			warn("Your exploit doesn't support 'setclipboard'")
+		end
+	end)
+	
+	local Section = Tab:NewSection("This Is Qoucx Hub Premium")
+	local Section = Tab:NewSection("Features it has instead on Free")
+	local Section = Tab:NewSection("Hatch Speed Event 24/7")
+	local Section = Tab:NewSection("Auto Claim Prizes")
+	local Section = Tab:NewSection("")
+	
+	local Tab = Window:NewTab("\s")
+	local Section = Tab:NewSection("AutoBlow")
+	Section:NewButton("Start Blowing", "Automatically Blows", function()
+		while true do wait()
+			local args = {
+				[1] = "BlowBubble"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+	
+	Section:NewButton("Auto Sell Bubbles", "Automatically Sells", function()
+		wait()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Auto Sell"; 
+			Text = "Only Sells If Near Sell Area";
+			Duration = "5";
+		}) 
+		while true do wait()
+			local args = {
+				[1] = "SellBubble",
+				[2] = "Sell"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+	
+	local Section = Tab:NewSection("Trick Or Treat Farm")
+	Section:NewButton("Start Autofarming", "Trick or Treat AutoFarm", function()
+		getgenv().AutoKnock = true;
+		while (AutoKnock) do
+			for i,v in next, game:GetService("Workspace").HalloweenWorld.Houses:GetChildren() do
+				local root = v.Activation.Root;
+				local houseClaimable = v.Activation.Active.Value;
+		
+				if (houseClaimable) then
+					game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),{CFrame = v.Activation.Root.CFrame}):Play()
+					wait(4.5)
+				end
+			end
+		end
+	end)
+	
+	Section:NewButton("Stop Autofarming", "AutoFarm", function()
+		getgenv().AutoKnock  = false;
+	end)
+	
+	local Section = Tab:NewSection("Lolly Farm")
+	Section:NewButton("Start Autofarming Coins/Lollipops", "AutoFarm", function()
+		
+		getgenv().LollyFarm = true;
+	
+		while LollyFarm == true do 
+			wait()
+			for _,pickup in pairs(game:GetService("Workspace").Pickups:GetChildren()) do
+				if pickup:IsA("MeshPart") and (player.Position-pickup.Position).magnitude <= 50 then
+					wait()
+					player.CFrame = pickup.CFrame
+				end
+			end
+		end
+	end)
+	
+	Section:NewButton("Stop Autofarming", "AutoFarm", function()
+		wait()
+		getgenv().LollyFarm = false;
+		wait()
+	end)
+
+    local Section = Tab:NewSection("Auto Claim Prizes")
+    Section:NewButton("Auto Claim Prizes", "", function()
+        spawn(function()
+            local prize = require(game:GetService("ReplicatedStorage").Assets.Modules.ItemDataService.PrizeModule)
+            while wait(.1) do
+                if misc.flags.AutoClaimBubbles then
+                    for i,d in ipairs(prize["Bubbles"]) do
+                        f:InvokeServer("CollectPrize","Bubbles",i)
+                        wait(3)
+                    end
+                end
+        
+                if misc.flags.AutoClaimEggs then
+                    for k,v in ipairs(prize["Eggs"]) do
+                        f:InvokeServer("CollectPrize","Eggs",k)
+                        wait(3)
+                    end
+                end
+            end
+        end)
+    end)
+	
+	local Section = Tab:NewSection("Auto Chests")
+	Section:NewButton("Auto Chests", "", function()
+		while AutoChests == true do 
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "The Floating Island"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "The Twilight"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "XP Island"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "The Void"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Atlantis"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Underworld"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Rainbow Land"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Mystic Forest"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Toy Land"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Candy Land"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "CollectChestReward",
+				[2] = "Beach World"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	
+		end
+	end)
+
+
+	local Tab = Window:NewTab("Claim Qsts + Spin")
+	local Section = Tab:NewSection("Auto Complete and Claim Challenges")
+	
+	Section:NewButton("Auto Claim", "", function()
+		while AutoClaimQ == true do 
+			wait()
+				local args = {
+					[1] = "ClaimShardQuestReward"
+				}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+	
+	Section:NewButton("Auto Select Quest", "", function()
+		while AutoSel == true do
+			wait()
+				local args = {
+					[1] = "GetShardQuest",
+					[2] = "Hard"
+				}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+	
+	local Section = Tab:NewSection("Auto Spin Wheel")
+	
+	Section:NewButton("Auto Spin Wheel", "", function()
+		while AutoSpin == true do 
+			wait()
+				local args = {
+					[1] = "SpinToWin"
+				}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)	
+	
+	local Tab = Window:NewTab("Luck + HatchSpd")
+
+	local Section = Tab:NewSection("Luck and more")
+	Section:NewButton("Redeem All Codes", "", function()        
+		while true do 
+			wait()        
+				local args = {
+					[1] = "RedeemCode",
+					[2] = "Update77"
+				}
+		
+			game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+			wait()
+				local args = {
+					[1] = "RedeemCode",
+					[2] = "Easter21"
+				}
+		
+			game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+			wait()
+			local args = {
+				[1] = "RedeemCode",
+				[2] = "Luckiest"
+			}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update75"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update74"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update73"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update72"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "SylentlyBest"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update71"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "LuckyCode"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "BlizzyWizzy"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update70"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "SANTACLAUS"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update68"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "SANTACLAUS"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "SUPERBOOST"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "JollyChristmas"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update67"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "EpicSecretCode"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "MegaSpeedBoost"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update60"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Citrus"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update51"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update50"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update49"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update48"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update47"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Update46"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Season7"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Challenges"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "FreeSpeed"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Clown"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "ChristmasBoost"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "HammieIsBadAtRocketLeague"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Autumn"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "AutumnSale2"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "SpookyHalloween"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Cupid"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Spring"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Shadow"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Cupid"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "Eeaster2020"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = "RedeemCode",
+			[2] = "YouTubeLuck"
+		}
+		
+		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+		end
+	end)
+		
+	Section:NewButton("Enable Luck + HatchSpeed Events", "", function()
+		wait()
+		game.ReplicatedStorage.Assets.Modules.Is2xSpeedEnabled.Enabled.Value = true
+		wait()
+		game:GetService("ReplicatedStorage").Assets.Modules.Is2xLuckEnabled.Value  = true
+	end)
+
+	
+	local Tab = Window:NewTab("Eggs")
+	local Section = Tab:NewSection("Delete Egg Animation")
+	Section:NewButton("Remove Egg Animation (No Lag)", "", function()
+		wait()
+		game:GetService("ReplicatedStorage").Assets.Eggs:Destroy()
+	end)
+	
+	local Section = Tab:NewSection("Wisp Egg")
+	Section:NewButton("Enable Hatching Again", "", function()
+		getgenv().SingleWisp = true;
+		getgenv().TripleWisp = true;
+		getgenv().SingleGhost = true;
+		getgenv().TripleGhost = true;
+		getgenv().SingleHellish = true;
+		getgenv().TripleHellish = true;
+	end)
+	
+	Section:NewButton("Stop Hatching", "", function()
+		getgenv().SingleWisp = false;
+		getgenv().TripleWisp = false;
+		getgenv().SingleGhost = false;
+		getgenv().TripleGhost = false;
+		getgenv().SingleHellish = false;
+		getgenv().TripleHellish = false;
+	end)
+	
+	Section:NewButton("Single Hatch Wisp Egg", "", function()
+		while SingleWisp == true do 
+			wait()
+			local args = {
+				[1] = "PurchaseEgg",
+				[2] = "Wisp Egg"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+	
+	Section:NewButton("Triple Hatch Wisp Egg", "", function()
+		while TripleWisp == true do 
+			wait()
+			local args = {
+				[1] = "PurchaseEgg",
+				[2] = "Wisp Egg",
+				[3] = "Multi"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	
+		end
+	end)
+	
+	local Section = Tab:NewSection("Ghost Egg")
+	
+	Section:NewButton("Single Hatch Ghost Egg", "", function()
+		while SingleGhost == true do
+			wait()
+			local args = {
+				[1] = "PurchaseEgg",
+				[2] = "Ghost Egg"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+	
+	Section:NewButton("Triple Hatch Ghost Egg", "", function()
+		while TripleGhost == true do
+			wait()
+			local args = {
+				[1] = "PurchaseEgg",
+				[2] = "Ghost Egg",
+				[3] = "Multi"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+	
+	local Section = Tab:NewSection("Hellish Egg")
+	Section:NewButton("Triple Hatch Hellish Egg", "", function()
+		while TripleHellish == true do
+			wait()
+			local args = {
+				[1] = "PurchaseEgg",
+				[2] = "Hellish Egg",
+				[3] = "Multi"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+	
+	Section:NewButton("Single Hatch Hellish Egg", "", function()
+		while SingleHellish == true do
+			wait()
+			local args = {
+				[1] = "PurchaseEgg",
+				[2] = "Hellish Egg"
+			}
+	
+			game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+		end
+	end)
+	
+	local Tab = Window:NewTab("Teleports")
+	local Section = Tab:NewSection("Worlds")
+	Section:NewButton("Floating Island", "", function()
+		wait()
+		local args = {
+			[1] = "TeleportToCheckpoint",
+			[2] = "The Floating Island"
+		}
+	
+		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	end)
+	
+	Section:NewButton("Halloween World", "", function()
+		wait()
+		local args = {
+			[1] = "Teleport",
+			[2] = "EventSpawn"
+		}
+	
+		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	end)
+	
+	Section:NewButton("Space", "", function()
+		wait()
+		local args = {
+			[1] = "TeleportToCheckpoint",
+			[2] = "Space"
+		}
+	
+		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	end)
+	
+	Section:NewButton("The Twilight", "", function()
+		wait()
+		local args = {
+			[1] = "TeleportToCheckpoint",
+			[2] = "The Twilight"
+		}
+	
+		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	end)
+	Section:NewButton("The Skylands", "", function()
+		wait()
+		local args = {
+			[1] = "TeleportToCheckpoint",
+			[2] = "The Skylands"
+		}
+	
+		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	end)
+	Section:NewButton("Zen", "", function()
+		wait()
+		local args = {
+			[1] = "TeleportToCheckpoint",
+			[2] = "Zen"
+		}
+	
+		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	end)
+	
+	Section:NewButton("The Void", "", function()
+		wait()
+		local args = {
+			[1] = "TeleportToCheckpoint",
+			[2] = "The Void"
+		}
+	
+		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	end)
+	
+	Section:NewButton("XP Island", "", function()
+		wait()
+		local args = {
+			[1] = "TeleportToCheckpoint",
+			[2] = "XP Island"
+		}
+	
+		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	end)
+	
+	Section:NewButton("Candy World", "", function()
+		wait()
+		local args = {
+			[1] = "Teleport",
+			[2] = "Candy LandSpawn"
+		}
+	
+		game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+	end)
+	
+	
+	
+	
+	local Tab = Window:NewTab("Local Player")
+	local Section = Tab:NewSection("LocalPlayer Scripts")
+	Section:NewSlider("Walkspeed", "Walkspeed", 100, 24, function(s) -- 500 (MaxValue) | 0 (MinValue)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+	end)
+	
+	Section:NewSlider("Jumppower", "Jumppower", 250, 65, function(s) -- 500 (MaxValue) | 0 (MinValue)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower= s
+	end)
+	
+	Section:NewSlider("FOV", "Field Of View", 120, 70, function(s) -- 500 (MaxValue) | 0 (MinValue)
+		game.Workspace.Camera.FieldOfView = s
+	end)
+	
+	Section:NewButton("Auto Speak", "", function()
+		wait(0.5)
+		getgenv().AutoChat = true;  
+		wait()      
+		while AutoChat == true do
+			wait(2.5)
+			local args = {
+				[1] = "Qoucx Winning!",
+				[2] = "All"
+			}
+	
+			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+		end
+	end)
+	
+	Section:NewButton("Stop Auto Speak", "", function()
+		wait()
+		getgenv().AutoChat = false;
+		wait(1)
+		getgenv.AutoChat = true;
+	end)
+	
+	Section:NewButton("Hide Name", "", function()
+		game.Players.LocalPlayer.Name = "Anonymous"
+		wait()
+		game.Players.LocalPlayer.DisplayName = "Anonymous"
+		wait()
+		game:GetService("Players").LocalPlayer.Character.Head.CustomPlayerTag.Enabled = false
+	end)    
+	
+	
+	
+	
+	
+	
+	local Tab = Window:NewTab("Settings")
+	local Section = Tab:NewSection("Settings")
+	Section:NewKeybind("Toggle UI", "Toggles the User Interface", Enum.KeyCode.F, function()
+		Library:ToggleUI()
+	end)
+	
+	Section:NewButton("READ BEFORE FPS BOOST", "", function()
+		wait()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "FPS Boost"; 
+			Text = "Only use if you are going to go afk, you cannot undo this.";
+			Duration = "5";
+		}) 
+	end)
+	
+	
+	
+	
+	Section:NewButton("Better FPS When Hatching", "", function()
+		local ScreenGui = Instance.new("ScreenGui")
+		local Frame = Instance.new("Frame")
+		local TextLabel = Instance.new("TextLabel")
+		local TextLabel_2 = Instance.new("TextLabel")
+	
+		ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+		ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+		Frame.Parent = ScreenGui
+		Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame.Position = UDim2.new(0.0672727302, 0, 0.185964912, 0)
+		Frame.Size = UDim2.new(0, 589, 0, 129)
+	
+		TextLabel.Parent = Frame
+		TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.Position = UDim2.new(0.0305361822, 0, 0.07751479, 0)
+		TextLabel.Size = UDim2.new(0, 552, 0, 50)
+		TextLabel.Font = Enum.Font.SourceSans
+		TextLabel.Text = "You cannot reverse this are you sure : I recommend only using if you are going to afk grind and sleep"
+		TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel.TextSize = 14.000
+	
+		TextLabel_2.Parent = TextLabel
+		TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_2.Position = UDim2.new(-0.000260919333, 0, 1.17751479, 0)
+		TextLabel_2.Size = UDim2.new(0, 552, 0, 50)
+		TextLabel_2.Font = Enum.Font.SourceSans
+		TextLabel_2.Text = "There is 10 Seconds Until it FPS Boosts"
+		TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_2.TextSize = 14.000
+	
+		wait(10)
+		local SloGui = Instance.new("ScreenGui")
+		local Frame2 = Instance.new("Frame")
+		local TextLabel = Instance.new("TextLabel")
+	
+		SloGui.Name = "SloGui"
+		SloGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+		SloGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+		Frame2.Parent = SloGui
+		Frame2.BackgroundColor3 = Color3.fromRGB(1, 1, 1)
+		Frame2.Size = UDim2.new(0, 1920, 0, 1080)
+	
+		TextLabel.Parent = Frame
+		TextLabel.BackgroundColor3 = Color3.fromRGB(1, 1, 1)
+		TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+		TextLabel.BorderSizePixel = 0
+		TextLabel.Position = UDim2.new(0.324156284, 0, 0.423391819, 0)
+		TextLabel.Size = UDim2.new(0, 396, 0, 130)
+		TextLabel.Font = Enum.Font.SourceSans
+		TextLabel.Text = "You have disabled your screen for better FPS"
+		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.TextSize = 14.000      
+	end)
+	
+	local Tab = Window:NewTab("Trolling")
+	local Section = Tab:NewSection("Troll")
+	Section:NewButton("1st On Competitive Leaderboards", "", function()
+		game:GetService("Workspace").Competitive.Boards.EggBoard.SurfaceGui.Frame.ScrollingFrame["1"].NameBacking.PlayerName.Text = (CrntPlr.DisplayName)
+	end)    
+	
+	local Tab = Window:NewTab("Credits")
+	local Section = Tab:NewSection("! Qoucx#9415 - Owner and Scripter")
+	local Section = Tab:NewSection("YouBuggin#0001 - Helped me debug")
+	local Section = Tab:NewSection("Unidentified#4964 - Helped With Autofarm++")
+	Section:NewButton("Qoucx", "", function()
+		print("No")	
+	end)
+	
+	elseif game.PlaceId == 137877687 then 
+		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+		local Window = Library.CreateLib("Qoucx Hub RoCitizens", "Sentinel")
+		local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+		local CrntPlr = game.Players.LocalPlayer
+		local Burger = CFrame.new (-5342.27295, 6.16413927, 4462.93604, -0.0436534584, -2.0773447e-08, -0.999046743, 3.88718391e-08, 1, -2.24917773e-08, 0.999046743, -3.981663e-08, -0.0436534584)
+		local Bank = CFrame.new (-5174.7666, 6.5807991, 5266.92285, 0.999605954, 2.64660187e-08, -0.028070692, -2.64918256e-08, 1, -5.4742022e-10, 0.028070692, 1.29084832e-09, 0.999605954)
+		local GasStation = CFrame.new (-5152.52344, 6.08075905, 4692.4458, 0.961206138, -6.24350918e-08, 0.275831044, 7.45247064e-08, 1, -3.33483747e-08, -0.275831044, 5.26108899e-08, 0.961206138)
+		local Gym = CFrame.new (-4958.17822, 6.58077383, 5816.32373, 1, 1.76448332e-08, -4.90184502e-05, -1.76445667e-08, 1, 5.44188605e-09, 4.90184502e-05, -5.44102097e-09, 1)
+		local Spawn = CFrame.new (-4957.22266, 6.58078337, 4961.08057, -0.0315744318, -8.83287488e-09, 0.999501407, 4.26341664e-08, 1, 1.01841025e-08, -0.999501407, 4.29344666e-08, -0.0315744318)
+		local PoliceStation = CFrame.new (-5502.4248, 6.08075428, 4958.68652, -0.305918068, -2.83324724e-08, -0.952057838, -9.97553897e-08, 1, 2.29450792e-09, 0.952057838, 9.56748352e-08, -0.305918068)
+		local Disco = CFrame.new (-4876.44092, 6.58482218, 5598.17529, 0.0400315858, -3.03584322e-08, 0.999198437, 2.71889373e-08, 1, 2.92934992e-08, -0.999198437, 2.59944777e-08, 0.0400315858)
+		local CarShop = CFrame.new (-5170.99512, 6.17728376, 4948.41113, -0.134448245, -4.50411726e-08, -0.990920603, -2.03790886e-08, 1, -4.26888285e-08, 0.990920603, 1.44546215e-08, -0.134448245)
+		
+		
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "RoCitizens"; 
+			Text = "Made By ! Qoucx#9415";
+			Duration = "5";
+		}) 
+		
+		
+		
+		
+		getgenv().RCCandyFarm = true;
+		getgenv().AutoBuy = true;
+		
+		local Tab = Window:NewTab("Latest Update")
+		local Section = Tab:NewSection("Made by ! Qoucx#9415")
+		local Section = Tab:NewSection("Release!")
+		
+		local Tab = Window:NewTab("Teleports")
+		local Section = Tab:NewSection("Teleports")
+		Section:NewButton("Burger Place", "", function()
+			player.CFrame = Burger
+		end)
+		
+		Section:NewButton("Police Station", "", function()
+			player.CFrame = PoliceStation
+		end)
+		
+		Section:NewButton("Gym", "", function()
+			player.CFrame = Gym
+		end)
+		
+		Section:NewButton("Spawn", "", function()
+			player.CFrame = Spawn
+		end)
+		
+		Section:NewButton("Disco", "", function()
+			player.CFrame = Disco
+		end)
+		
+		Section:NewButton("CarShop", "", function()
+			player.CFrame = CarShop
+		end)
+		
+		Section:NewButton("GasStation", "", function()
+			player.CFrame = GasStation
+		end)
+		
+		Section:NewButton("Bank", "", function()
+			player.CFrame = Bank
+		end)
+		
+		local Tab = Window:NewTab("Halloween")
+		local Section = Tab:NewSection("Auto Farm (Halloween)")
+		
+		Section:NewButton("Auto Farm Candy", "", function()
+			while CandyFarm == true do 
+			   wait()
+			   print("Not Ready")
+			end
+		end)
+		
+		local Section = Tab:NewSection("Auto Buy (Halloween)")
+		local Tab = Window:NewTab("Auto Buy")
+		local Section = Tab:NewSection("Auto Buy (Halloween)")
+		
+		Section:NewButton("Auto Buy Pumpkins", "", function()
+			while AutoBuy == true do 
+				wait()
+					local args = {
+						[1] = "Food",
+						[2] = {
+							["Name"] = "Pumpkin",
+							["Shop"] = "Super Mart"
+						}
+					}
+		
+				game:GetService("ReplicatedStorage").Relays.Transaction.BuyItem:InvokeServer(unpack(args))
+			end
+			
+		end)
+		
+		Section:NewButton("Stop Auto Buying Candy", "", function()
+			wait()
+			getgenv().AutoBuy = false;
+		end)
+	
+	elseif game.PlaceId == 286090429 then
+		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+		local Window = Library.CreateLib("Qoucx Hub Arsenal", "Sentinel")
+		local Tab = Window:NewTab("Latest Update")
+		local Section = Tab:NewSection("Latest Update")
+		local Section = Tab:NewSection("Release.")
+		Section:NewButton("Owner Of Script ! Qoucx#9415", "", function()
+			if (setclipboard) then
+				setclipboard("! Qoucx#9415")
+			else
+				warn("Your exploit doesn't support 'setclipboard'")
+			end
+		end)
+	
+		local Tab = Window:NewTab("Silent Aim + ESP")
+		local Section = Tab:NewSection("Silent Aim + ESP")
+		Section:NewButton("Silent Aim", "", function()
+			loadstring(game:HttpGet('https://pastebin.com/raw/FuXqmMtD'))()
+		end)
+	
+	Section:NewButton("ESP", "", function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/hzhXZCDp", true))()
+	end)
+	
+    elseif game.PlaceId == 7553566159 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Qoucx Hub Squid Game", "Sentinel")
+        local Tab = Window:NewTab("Main")
+    
+        local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local RLightGLight = CFrame.new (-182.7027130127, 6.0999970436096, -630.61700439453)
+        local SafeSpot = CFrame.new (-28.080862045288, -72.609413146973, -363.31781005859)
+        local Flood = CFrame.new (72.488594055176, -221.40298461914, -94.974258422852)
+        local Flood2 = CFrame.new (105.95758056641, -73.913879394531, -53.247680664063)
+        local Flood3 = CFrame.new (105.48046112061, -73.913940429688, -86.869895935059)
+    
+        getgenv().AutoTug = true;
+    
+        local Section = Tab:NewSection("Teleports")
+        Section:NewButton("Red Light Green Light", "", function()
+            player.CFrame = RLightGLight
+        end)
+    
+        Section:NewButton("SafeSpot When Fighting", "", function()
+            player.CFrame = SafeSpot
+        end)
+    
+        Section:NewButton("Flood Escape", "", function()
+            wait()
+            player.CFrame = Flood
+            wait()
+            player.CFrame = Flood2
+            wait()
+            player.CFrame = Flood3
+        end)
+        
+        local Section = Tab:NewSection("Autos")
+        Section:NewButton("Auto Finish Honeycomb", "", function()
+            wait()
+            local args = {
+                [1] = true
+            }
+            
+        game:GetService("ReplicatedStorage").Remotes.SugarHoneycomb:FireServer(unpack(args))
+        end)
+
+
+        Section:NewButton("Auto Tug", "", function()
+            while AutoTug == true do 
+                wait()
+                game:GetService("ReplicatedStorage").TugRemote:FireServer()
+            end
+        end)
+    end
+
+	
