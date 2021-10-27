@@ -187,7 +187,7 @@ if game.PlaceId == 2512643572 then
 				local houseClaimable = v.Activation.Active.Value;
 		
 				if (houseClaimable) then
-					game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),{CFrame = v.Activation.Root.CFrame}):Play()
+					game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),{CFrame = v.Activation.Root.CFrame}):Play()
 					wait(4.5)
 				end
 			end
@@ -651,7 +651,7 @@ if game.PlaceId == 2512643572 then
 		game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
 		end
 	end)
-		
+			
 	local Tab = Window:NewTab("Eggs")
 	local Section = Tab:NewSection("Delete Egg Animation")
 	Section:NewButton("Remove Egg Animation (No Lag)", "", function()
