@@ -1,0 +1,122 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Qoucx Hub Speed Man Simulator", "Serpent")
+local gsHum = game:GetService("Players").LocalPlayer.Character.Humanoid
+local plHead = game.Players.LocalPlayer.Character.Head
+local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Autofarm Halloween Event")
+
+Section:NewToggle("Farm 3rd Halloween Shoe", "Be In Halloween Area To Work", function(state)
+    getgenv().HalloweenShoeFarm = state
+    if state then
+        while getgenv().HalloweenShoeFarm == true do  
+            wait()
+            gsHum:MoveTo(Vector3.new(528.50866699219, -186.24168395996, -753.37322998047))
+            wait(2)
+            gsHum:MoveTo(Vector3.new(548.11828613281, -185.85221862793, -763.63696289063))
+            wait(3)
+            keypress(0x45)
+            keyrelease(0x45)
+            wait(0.75)
+            keypress(0x45)
+            keyrelease(0x45)
+            wait(0.75) 
+            keypress(0x45)
+            keyrelease(0x45)
+            wait(0.75)
+            gsHum:MoveTo(Vector3.new(604.11358642578, -186.13723754883, -763.47235107422))
+            wait(2)
+            gsHum:MoveTo(Vector3.new(602.97454833984, -186.20785522461, -749.58746337891))
+            wait(1)
+            gsHum:MoveTo(Vector3.new(542.41485595703, -186.20785522461, -741.71105957031))
+            wait()
+        end
+    end
+end)
+
+Section:NewToggle("Farm 2nd Halloween Shoe", "Be In Halloween Area To Work", function(state2)
+    getgenv().HalloweenShoeFarm2 = state2
+    if state2 then
+        while getgenv().HalloweenShoeFarm2 == true do  
+            wait()
+            gsHum:MoveTo(Vector3.new(528.50866699219, -186.24168395996, -753.37322998047))
+            wait(2)
+            gsHum:MoveTo(Vector3.new(548.72906494141, -185.92333984375, -745.82318115234))
+            wait(3)
+            keypress(0x45)
+            keyrelease(0x45)
+            wait(0.75)
+            keypress(0x45)
+            keyrelease(0x45)
+            wait(0.75) 
+            keypress(0x45)
+            keyrelease(0x45)
+            wait(0.75)
+            gsHum:MoveTo(Vector3.new(602.32385253906, -186.20785522461, -748.54974365234))
+            wait(2)
+            gsHum:MoveTo(Vector3.new(601.26702880859, -186.20785522461, -737.52520751953))
+            wait(1)
+            gsHum:MoveTo(Vector3.new(550.53546142578, -186.20785522461, -741.90789794922))
+            wait()
+        end
+    end
+end)
+
+Section:NewToggle("Farm 1st Halloween Shoe", "Be In Halloween Area To Work", function(state3)
+    getgenv().HalloweenShoeFarm3 = state3
+    if state3 then
+        while getgenv().HalloweenShoeFarm3 == true do  
+            wait()
+            gsHum:MoveTo(Vector3.new(528.50866699219, -186.24168395996, -753.37322998047))
+            wait(2)
+            gsHum:MoveTo(Vector3.new(547.20629882813, -186.20785522461, -736.22229003906))
+            wait(3)
+            keypress(0x45)
+            keyrelease(0x45)
+            wait(0.75)
+            keypress(0x45)
+            keyrelease(0x45)
+            wait(0.75) 
+            keypress(0x45)
+            keyrelease(0x45)
+            wait(0.75)
+            gsHum:MoveTo(Vector3.new(600.97222900391, -186.20785522461, -735.71203613281))
+            wait(2)
+            gsHum:MoveTo(Vector3.new(602.91583251953, -186.20785522461, -748.35241699219))
+            wait(1)
+            gsHum:MoveTo(Vector3.new(545.1865234375, -186.20785522461, -736.19055175781))
+            wait()
+        end
+    end
+end)
+
+
+Section:NewButton("Candy farm", "AutoFarm", function()
+    wait()
+	getgenv().Candy = true;
+	while Candy == true do 
+        wait()
+        for _,candycorn in pairs (game:GetService("Workspace").Worlds.Jungle.Decorations:GetDescendants()) do
+            if candycorn:IsA("MeshPart") and candycorn.Parent then 
+                wait()
+                firetouchinterest(plHead, candycorn, 0) 
+                wait()
+                firetouchinterest(plHead, candycorn, 1)
+                wait()
+            end
+        end
+    end
+end)
+
+
+Section:NewButton("Stop Candy Farm", "AutoFarm", function()
+    getgenv().Candy = false;
+end)
+
+local Tab = Window:NewTab("Settings")
+local Section = Tab:NewSection("Settings")
+
+Section:NewKeybind("Toggle UI", "Toggle", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
