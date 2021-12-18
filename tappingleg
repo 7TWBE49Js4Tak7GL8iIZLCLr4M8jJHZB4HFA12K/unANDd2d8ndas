@@ -1,0 +1,263 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Tapping Shit", "Serpent")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Main")
+
+getgenv().autoclick = true
+getgenv().autoegg = false 
+getgenv().gemfarm = false 
+
+Section:NewButton("AutoClick", "", function()
+    while autoclick do
+        wait()
+        game:GetService("ReplicatedStorage").Remotes.Events.Click:FireServer()
+        game:GetService("ReplicatedStorage").Remotes.Events.SuperClick:FireServer()
+    end    
+end)
+
+Section:NewToggle("Autofarm Gems", "", function(state)
+    getgenv().gemfarm = true
+    while gemfarm do
+    wait()
+    if state then
+        wait()
+        for i,v in pairs(game:GetService("Workspace").Gems:GetDescendants()) do 
+            wait()
+            if v:IsA"MeshPart" and v.Name == "HumanoidRootPart" then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+           else
+                getgenv().gemfarm = false
+                end
+            end
+        end
+    end
+end)
+
+Section:NewButton("VIP Area", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-525.33709716797, 3.0785446166992, -140.82543945312)
+end)
+
+local Tab = Window:NewTab("Chests")
+local Section = Tab:NewSection("Chests")
+
+Section:NewButton("Collect All Chests", "", function()
+    for i,v in pairs(game:GetService("Workspace").Spins:GetDescendants()) do 
+        if v.Name == "Union" then 
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+        end
+    end
+end)
+
+local Tab = Window:NewTab("Eggs")
+local Section = Tab:NewSection("Eggs")
+
+local eggs = {};
+for i,v in pairs(game:GetService("Workspace").Crystals:GetChildren()) do
+    table.insert(eggs, v.Name)
+end
+
+Section:NewDropdown("Eggs", "Dropdown To See Eggs", eggs, function(currentOption)
+    wait()
+    SelectedEgg = currentOption
+end)
+
+Section:NewToggle("Open Selected Egg", "", function(state)
+    getgenv().autoegg = true;
+    while autoegg do
+    wait()
+    if state then
+        wait()
+        local args = {
+            [1] = (SelectedEgg),
+            [2] = 1
+        }
+        
+    game:GetService("ReplicatedStorage").Remotes.Events.BuyCrystal:FireServer(unpack(args))
+        else
+            getgenv().autoegg = false;  
+        end
+    end
+end)
+
+Section:NewToggle("Triple Open Selected Egg", "", function(state)
+    getgenv().autoegg = true;
+    while autoegg do
+    wait()
+    if state then
+        wait()
+        local args = {
+            [1] = (SelectedEgg),
+            [2] = 3
+        }
+        
+    game:GetService("ReplicatedStorage").Remotes.Events.BuyCrystal:FireServer(unpack(args))
+        else
+            getgenv().autoegg = false;  
+        end
+    end
+end)
+
+local Tab = Window:NewTab("Worlds")
+local Section = Tab:NewSection("Worlds")
+
+local worlds = {};
+for i,v in pairs(game:GetService("Workspace").Spawns:GetChildren()) do
+    table.insert(worlds, v.Name)
+end
+
+Section:NewDropdown("Worlds", "Dropdown To See Worlds", worlds, function(currentOption)
+    wait()
+    SelectedWorld = currentOption
+end)
+
+Section:NewButton("Teleport To Selected World", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = currentOption.CFrame
+end)
+
+local Tab = Window:NewTab("Teleports")
+local Section = Tab:NewSection("Teleports")
+
+Section:NewButton("Teleport To Boss", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(612.27935791016, -20.378953933716, -427.63778686523)
+end)
+
+Section:NewButton("Teleport To Boss", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-525.33709716797, 3.0785446166992, -140.82543945312)
+end)
+
+local Tab = Window:NewTab("Credits")
+local Section = Tab:NewSection("Credits")
+Section:NewButton("Qoucx / Silent / Model", "", function()
+    setclipboard("model#0005")
+end)local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Tapping Shit", "Serpent")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Main")
+
+getgenv().autoclick = true
+getgenv().autoegg = false 
+getgenv().gemfarm = false 
+
+Section:NewButton("AutoClick", "", function()
+    while autoclick do
+        wait()
+        game:GetService("ReplicatedStorage").Remotes.Events.Click:FireServer()
+        game:GetService("ReplicatedStorage").Remotes.Events.SuperClick:FireServer()
+    end    
+end)
+
+Section:NewToggle("Autofarm Gems", "", function(state)
+    getgenv().gemfarm = true
+    while gemfarm do
+    wait()
+    if state then
+        wait()
+        for i,v in pairs(game:GetService("Workspace").Gems:GetDescendants()) do 
+            wait()
+            if v:IsA"MeshPart" and v.Name == "HumanoidRootPart" then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+           else
+                getgenv().gemfarm = false
+                end
+            end
+        end
+    end
+end)
+
+Section:NewButton("VIP Area", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-525.33709716797, 3.0785446166992, -140.82543945312)
+end)
+
+local Tab = Window:NewTab("Chests")
+local Section = Tab:NewSection("Chests")
+
+Section:NewButton("Collect All Chests", "", function()
+    for i,v in pairs(game:GetService("Workspace").Spins:GetDescendants()) do 
+        if v.Name == "Union" then 
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+        end
+    end
+end)
+
+local Tab = Window:NewTab("Eggs")
+local Section = Tab:NewSection("Eggs")
+
+local eggs = {};
+for i,v in pairs(game:GetService("Workspace").Crystals:GetChildren()) do
+    table.insert(eggs, v.Name)
+end
+
+Section:NewDropdown("Eggs", "Dropdown To See Eggs", eggs, function(currentOption)
+    wait()
+    SelectedEgg = currentOption
+end)
+
+Section:NewToggle("Open Selected Egg", "", function(state)
+    getgenv().autoegg = true;
+    while autoegg do
+    wait()
+    if state then
+        wait()
+        local args = {
+            [1] = (SelectedEgg),
+            [2] = 1
+        }
+        
+    game:GetService("ReplicatedStorage").Remotes.Events.BuyCrystal:FireServer(unpack(args))
+        else
+            getgenv().autoegg = false;  
+        end
+    end
+end)
+
+Section:NewToggle("Triple Open Selected Egg", "", function(state)
+    getgenv().autoegg = true;
+    while autoegg do
+    wait()
+    if state then
+        wait()
+        local args = {
+            [1] = (SelectedEgg),
+            [2] = 3
+        }
+        
+    game:GetService("ReplicatedStorage").Remotes.Events.BuyCrystal:FireServer(unpack(args))
+        else
+            getgenv().autoegg = false;  
+        end
+    end
+end)
+
+local Tab = Window:NewTab("Worlds")
+local Section = Tab:NewSection("Worlds")
+
+local worlds = {};
+for i,v in pairs(game:GetService("Workspace").Spawns:GetChildren()) do
+    table.insert(worlds, v.Name)
+end
+
+Section:NewDropdown("Worlds", "Dropdown To See Worlds", worlds, function(currentOption)
+    wait()
+    SelectedWorld = currentOption
+end)
+
+Section:NewButton("Teleport To Selected World", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = currentOption.CFrame
+end)
+
+local Tab = Window:NewTab("Teleports")
+local Section = Tab:NewSection("Teleports")
+
+Section:NewButton("Teleport To Boss", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(612.27935791016, -20.378953933716, -427.63778686523)
+end)
+
+Section:NewButton("Teleport To Boss", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-525.33709716797, 3.0785446166992, -140.82543945312)
+end)
+
+local Tab = Window:NewTab("Credits")
+local Section = Tab:NewSection("Credits")
+Section:NewButton("Qoucx / Silent / Model", "", function()
+    setclipboard("model#0005")
+end)
